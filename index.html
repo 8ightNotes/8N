@@ -37,9 +37,9 @@
                     <i class="fab fa-youtube fa-2x"></i> Watch on YouTube
                 </a>
             </div>
-            <h3>Featured Track/Album:</h3>
-            <div class="featured-embed">
-                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/4kNFm57oA75cZbAXYl3nmb?si=AAPrvLHMS9qLJRKcltV0nQ" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            <h3>All My Music</h3>
+            <div id="all-songs-container">
+                <p>Loading music...</p>
             </div>
         </section>
 
@@ -85,6 +85,66 @@
                     .catch(err => console.log('Service Worker registration failed:', err));
             });
         }
+    </script>
+
+    <script>
+        // Array to hold your song data
+        // You will add/remove songs from this array
+        const allSongs = [
+            {
+                title: "ARSENAL",
+                spotifyEmbedUrl: "https://open.spotify.com/embed/track/4kNFm57oA75cZbAXYl3nmb?si=AAPrvLHMS9qLJRKcltV0nQ" // !!! REPLACE with your actual Spotify embed URL !!!
+            },
+            {
+                title: "Another Hit Song",
+                spotifyEmbedUrl: "https://open.spotify.com/embed/track/YOUR_ANOTHER_SONG_ID?utm_source=generator" // !!! REPLACE with actual URL !!!
+            },
+            {
+                title: "My Latest Single",
+                spotifyEmbedUrl: "https://open.spotify.com/embed/track/YOUR_LATEST_SONG_ID?utm_source=generator" // !!! REPLACE with actual URL !!!
+            }
+            // Add more songs here following the same format
+            // {
+            //     title: "New Track Name",
+            //     spotifyEmbedUrl: "YOUR_SPOTIFY_EMBED_URL_HERE"
+            // },
+        ];
+
+        // Function to create and display song embeds
+        function displaySongs() {
+            const container = document.getElementById('all-songs-container');
+            container.innerHTML = ''; // Clear "Loading music..."
+
+            if (allSongs.length === 0) {
+                container.innerHTML = '<p>No music previews available yet. Check back soon!</p>';
+                return;
+            }
+
+            allSongs.forEach(song => {
+                const songDiv = document.createElement('div');
+                songDiv.className = 'song-preview'; // Add a class for styling
+
+                const songTitle = document.createElement('h4'); // Use h4 for individual song titles
+                songTitle.textContent = song.title;
+
+                const iframe = document.createElement('iframe');
+                iframe.style.borderRadius = '12px';
+                iframe.src = song.spotifyEmbedUrl;
+                iframe.width = '100%';
+                iframe.height = '152'; // Use a smaller height for multiple previews (Spotify standard for single tracks)
+                iframe.frameBorder = '0';
+                iframe.allowFullscreen = true;
+                iframe.allow = 'autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture';
+                iframe.loading = 'lazy';
+
+                songDiv.appendChild(songTitle);
+                songDiv.appendChild(iframe);
+                container.appendChild(songDiv);
+            });
+        }
+
+        // Call the function to display songs when the page loads
+        document.addEventListener('DOMContentLoaded', displaySongs);
     </script>
 </body>
 </html>
