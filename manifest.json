@@ -1,0 +1,21 @@
+{
+  "name": "8ight Notes Official App",
+  "short_name": "8ight Notes Official",
+  "description": "The official app for 8ight Notes music, news, and updates.",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#1a1a1a",
+  "theme_color": "#00bcd4",
+  "icons": [
+    {
+      "src": "images/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "images/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
