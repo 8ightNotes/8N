@@ -1,0 +1,226 @@
+/* General Body Styles */
+body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #1a1a1a; /* Fallback dark background color if image doesn't load */
+    color: #e0e0e0; /* Light text color */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensures footer sticks to bottom if content is short */
+
+    /* --- BACKGROUND IMAGE PROPERTIES --- */
+    /* *** IMPORTANT FIX: Added 'images/' to the path *** */
+    background-image: url('images/8ightnotesimage.jpg');
+    background-size: cover; /* Ensures the image covers the entire body */
+    background-position: center center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-attachment: fixed; /* Makes the background fixed as you scroll */
+    /* --- END BACKGROUND IMAGE PROPERTIES --- */
+}
+
+/* Header Styles */
+header {
+    background-color: rgba(0, 0, 0, 0.8); /* Even darker for header with some transparency */
+    color: #ffffff;
+    padding: 2rem 1rem;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+header h1 {
+    font-family: 'Luckiest Guy', cursive; /* Applied Luckiest Guy font */
+    font-size: 3.5em; /* Slightly larger for emphasis */
+    margin-bottom: 0.5rem;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Subtle text shadow for pop */
+}
+
+header p {
+    font-family: 'Montserrat', sans-serif; /* Kept Montserrat for readability */
+    font-size: 1.2em;
+    font-style: italic;
+    color: #bbbbbb;
+}
+
+/* Main Content Area */
+main {
+    flex-grow: 1; /* Allows main content to take up available space */
+    padding: 2rem 1rem;
+    max-width: 900px; /* Max width for content to keep it readable */
+    margin: 0 auto; /* Center the content */
+}
+
+section {
+    background-color: rgba(42, 42, 42, 0.9); /* Slightly lighter dark for sections with transparency */
+    margin-bottom: 2rem;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+section h2 {
+    font-family: 'Luckiest Guy', cursive; /* Applied Luckiest Guy font */
+    color: #00bcd4; /* A vibrant accent color (cyan) */
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 2.5em; /* Slightly larger for section titles */
+    border-bottom: 2px solid #00bcd4;
+    padding-bottom: 0.5rem;
+    display: inline-block; /* To make border-bottom only as wide as text */
+    margin-left: auto;
+    margin-right: auto;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Subtle text shadow */
+}
+
+/* Music Section Specifics */
+.music-links {
+    display: flex;
+    flex-wrap: wrap; /* Allows links to wrap on smaller screens */
+    justify-content: center;
+    gap: 1.5rem; /* Space between links */
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.music-links a {
+    background-color: #00bcd4; /* Accent color for buttons/links */
+    color: #000000; /* Dark text for contrast */
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Add a subtle shadow to buttons */
+}
+
+.music-links a:hover {
+    background-color: #008ba3; /* Darker accent on hover */
+    transform: translateY(-3px); /* Slight lift effect */
+}
+
+.music-links img {
+    width: 30px; /* Size for platform icons */
+    height: 30px;
+    border-radius: 3px;
+}
+
+.featured-embed {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.featured-embed iframe {
+    max-width: 100%; /* Ensures embed doesn't overflow */
+    border: none;
+    border-radius: 12px; /* Matches Spotify embed style */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Add shadow to embed */
+}
+
+/* News Section Specifics */
+article {
+    background-color: rgba(58, 58, 58, 0.9); /* Slightly different background for articles with transparency */
+    padding: 1.5rem;
+    border-radius: 6px;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+article h3 {
+    color: #00bcd4;
+    margin-top: 0;
+    font-size: 1.5em;
+}
+
+.date {
+    font-size: 0.9em;
+    color: #aaaaaa;
+    margin-bottom: 1rem;
+    display: block; /* Ensures date is on its own line */
+}
+
+.button {
+    display: inline-block;
+    background-color: #00bcd4;
+    color: #000000;
+    padding: 0.7rem 1.2rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 1rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Add a subtle shadow to buttons */
+}
+
+.button:hover {
+    background-color: #008ba3;
+    transform: translateY(-2px);
+}
+
+/* Social Links / Contact Section */
+.social-links {
+    text-align: center;
+    margin-top: 1.5rem;
+}
+
+.social-links a {
+    color: #00bcd4;
+    text-decoration: none;
+    font-size: 1.1em;
+    margin: 0 1rem;
+    transition: color 0.3s ease, transform 0.2s ease;
+    display: inline-block; /* Allows transform to work */
+}
+
+.social-links a:hover {
+    color: #ffffff;
+    transform: translateY(-3px);
+}
+
+/* Footer Styles */
+footer {
+    background-color: rgba(0, 0, 0, 0.8); /* Darker footer with some transparency */
+    color: #aaaaaa;
+    text-align: center;
+    padding: 1.5rem 1rem;
+    margin-top: 2rem;
+    font-size: 0.9em;
+}
+
+/* Responsive Design (for smaller screens) */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.8em; /* Adjusted for smaller screens */
+    }
+
+    header p {
+        font-size: 1em;
+    }
+
+    main {
+        padding: 1rem;
+    }
+
+    section {
+        padding: 1.5rem;
+    }
+
+    section h2 {
+        font-size: 2em; /* Adjusted for smaller screens */
+    }
+
+    .music-links a {
+        flex-direction: column; /* Stack icon and text on small screens */
+        padding: 0.7rem 1rem;
+        gap: 5px;
+    }
+
+    .social-links a {
+        display: block; /* Stack social links vertically */
+        margin: 0.5rem 0;
+    }
+}
