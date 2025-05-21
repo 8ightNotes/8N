@@ -109,19 +109,37 @@ section h2 {
     margin-right: 5px; /* Space between icon and text */
 }
 
-/* Removed: .music-links img - not needed if using Font Awesome */
-
-
-.featured-embed {
-    text-align: center;
-    margin-top: 2rem;
+/* Styling for individual song previews */
+.song-preview {
+    background-color: rgba(58, 58, 58, 0.9); /* Slightly different background than main sections */
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem; /* Space between song previews */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-.featured-embed iframe {
-    max-width: 100%; /* Ensures embed doesn't overflow */
+.song-preview h4 {
+    color: #00bcd4; /* Match accent color */
+    font-family: 'Montserrat', sans-serif; /* A more readable font for song titles */
+    font-size: 1.2em;
+    margin-top: 0;
+    margin-bottom: 0.8rem;
+    text-align: center;
+}
+
+/* Style for the iframe inside song previews */
+.song-preview iframe {
+    max-width: 100%; /* Ensures iframe doesn't overflow */
     border: none;
-    border-radius: 12px; /* Matches Spotify embed style */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Add shadow to embed */
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Consistent shadow */
+}
+
+/* Adjust the main music section for better spacing of embeds */
+#all-songs-container {
+    display: grid; /* Use grid for layout */
+    gap: 1.5rem; /* Space between grid items */
+    margin-top: 1.5rem;
 }
 
 /* News Section Specifics */
@@ -227,6 +245,13 @@ footer {
         font-size: 1.5em; /* Slightly smaller on mobile */
         margin-right: 0; /* No right margin when stacked */
         margin-bottom: 5px; /* Add bottom margin to separate from text */
+    }
+
+    .song-preview iframe {
+        height: 120px; /* Make embeds slightly shorter on mobile */
+    }
+    .song-preview h4 {
+        font-size: 1.1em;
     }
 
 
