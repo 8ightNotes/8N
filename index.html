@@ -113,15 +113,15 @@
             },
             {
                 title: "Pink Synth",
-                sptifyEmbedUrl: "https://open.spotify.com/embed/track/2kCGjXPs6gZhCWvCgrpwvO?si=MKIXB0laRKKybm0rqbL7Rw"
+                spotifyEmbedUrl: "https://open.spotify.com/embed/track/2kCGjXPs6gZhCWvCgrpwvO?si=MKIXB0laRKKybm0rqbL7Rw" // Corrected from 'sptifyEmbedUrl'
             },
             {
                 title: "Hero",
-                sptofyEmbedUrl: "https://open.spotify.com/embed/track/4SssgRDdKudFTp86RCcOGY?si=TwM0GdQmQQ2URrx2SQMIeg"
+                spotifyEmbedUrl: "https://open.spotify.com/embed/track/4SssgRDdKudFTp86RCcOGY?si=TwM0GdQmQQ2URrx2SQMIeg" // Corrected from 'sptofyEmbedUrl'
             },
             {
                 title: "Conduit",
-                sptifyEmbedUrl: "https://open.spotify.com/embed/track/5kl5bAF9H2Q5zN7KyKWpbB?si=fcPBPPebRVC0emKaAJaz1A"
+                spotifyEmbedUrl: "https://open.spotify.com/embed/track/5kl5bAF9H2Q5zN7KyKWpbB?si=fcPBPPebRVC0emKaAJaz1A" // Corrected from 'sptifyEmbedUrl'
             }
             // Add more songs here following the same format
             // {
@@ -149,7 +149,7 @@
 
                 const iframe = document.createElement('iframe');
                 iframe.style.borderRadius = '12px';
-                iframe.src = song.spotifyEmbedUrl;
+                iframe.src = song.spotifyEmbedUrl; // This is the property that was misspelled
                 iframe.width = '100%';
                 iframe.height = '150'; // Use a smaller height for multiple previews (Spotify standard for single tracks)
                 iframe.frameBorder = '0';
