@@ -73,7 +73,7 @@ section h2 {
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Subtle text shadow */
 }
 
-/* Music Section Specifics */
+/* Music Links (Spotify, Apple, YouTube Buttons) */
 .music-links {
     display: flex;
     flex-wrap: wrap; /* Allows links to wrap on smaller screens */
@@ -86,13 +86,14 @@ section h2 {
 .music-links a {
     background-color: #00bcd4; /* Accent color for buttons/links */
     color: #000000; /* Dark text for contrast */
-    padding: 0.8rem 1.5rem;
+    padding: 1.1rem 2rem; /* Adjusted from 0.8rem 1.5rem for ~35% increase */
     border-radius: 5px;
     text-decoration: none;
     font-weight: bold;
+    font-size: 1.35em; /* Increased font size by 35% */
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 12px; /* Increased gap slightly */
     transition: background-color 0.3s ease, transform 0.2s ease;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Add a subtle shadow to buttons */
 }
@@ -102,10 +103,10 @@ section h2 {
     transform: translateY(-3px); /* Slight lift effect */
 }
 
-/* NEW: Styling for Font Awesome Icons */
+/* Styling for Font Awesome Icons in music links */
 .music-links i {
     color: #ffffff; /* Make the icons white for good contrast on the cyan button */
-    font-size: 1.8em; /* Adjust size of icons */
+    font-size: 2.4em; /* Increased icon size proportionally (from 1.8em) */
     margin-right: 5px; /* Space between icon and text */
 }
 
@@ -133,6 +134,7 @@ section h2 {
     border: none;
     border-radius: 12px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Consistent shadow */
+    height: 205px; /* Increased height by approx 35% (from 152px) */
 }
 
 /* Adjust the main music section for better spacing of embeds */
@@ -234,21 +236,24 @@ footer {
         font-size: 2em; /* Adjusted for smaller screens */
     }
 
+    /* Music Links on smaller screens */
     .music-links a {
         flex-direction: column; /* Stack icon and text on small screens */
-        padding: 0.7rem 1rem;
-        gap: 5px;
+        padding: 0.9rem 1.5rem; /* Adjusted padding for mobile (from 0.7rem 1rem) */
+        font-size: 1.2em; /* Adjusted font size for mobile (from 1em) */
+        gap: 8px; /* Adjusted gap */
     }
 
     /* Adjust icon size for mobile view */
     .music-links i {
-        font-size: 1.5em; /* Slightly smaller on mobile */
+        font-size: 2em; /* Adjusted icon size for mobile (from 1.5em) */
         margin-right: 0; /* No right margin when stacked */
         margin-bottom: 5px; /* Add bottom margin to separate from text */
     }
 
+    /* Spotify Embeds on smaller screens */
     .song-preview iframe {
-        height: 120px; /* Make embeds slightly shorter on mobile */
+        height: 165px; /* Adjusted height for mobile (from 120px) */
     }
     .song-preview h4 {
         font-size: 1.1em;
