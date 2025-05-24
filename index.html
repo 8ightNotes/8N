@@ -67,7 +67,17 @@
                 <a href="https://www.tiktok.com/@8ight_notes" target="_blank">TikTok</a>
                 <a href="mailto:8ightnotes01@gmail.com">Email Me</a>
             </div>
-        </section>
+
+            <h3 class="tiktok-heading">Follow me on TikTok!</h3>
+            <div class="tiktok-embed-container">
+                <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@8ight_notes" data-unique-id="8ight_notes" data-embed-from="embed_page" data-embed-type="creator" style="max-width:780px; min-width:288px;">
+                    <section>
+                        <a target="_blank" href="https://www.tiktok.com/@8ight_notes?refer=creator_embed">@8ight_notes</a>
+                    </section>
+                </blockquote>
+                <script async src="https://www.tiktok.com/embed.js"></script>
+            </div>
+            </section>
     </main>
 
     <footer>
@@ -78,8 +88,6 @@
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', () => {
                 // !!! CRITICAL: REPLACE 'YOUR_REPOSITORY_NAME' below with your actual GitHub repository name !!!
-                // Example: if your repo is 'my-artist-app', use '/my-artist-app/service-worker.js'
-                // If your GitHub Pages is a User Page (e.g., yourusername.github.io), use '/service-worker.js'
                 navigator.serviceWorker.register('/YOUR_REPOSITORY_NAME/service-worker.js')
                     .then(reg => console.log('Service Worker registered successfully!', reg))
                     .catch(err => console.log('Service Worker registration failed:', err));
@@ -88,20 +96,18 @@
     </script>
 
     <script>
-        // Array to hold your song data
-        // You will add/remove songs from this array
         const allSongs = [
             {
                 title: "ARSENAL",
-                spotifyEmbedUrl: "https://open.spotify.com/embed/track/4kNFm57oA75cZbAXYl3nmb?si=AAPrvLHMS9qLJRKcltV0nQ" // !!! REPLACE with your actual Spotify embed URL !!!
+                spotifyEmbedUrl: "https://open.spotify.com/embed/track/4kNFm57oA75cZbAXYl3nmb?si=AAPrvLHMS9qLJRKcltV0nQ"
             },
             {
                 title: "Hypernova",
-                spotifyEmbedUrl: "https://open.spotify.com/embed/track/0C1EtOUMC0lhVenC2K7p2l?si=xI_FuuARTlOS1NcA3HZfmA" // !!! REPLACE with actual URL !!!
+                spotifyEmbedUrl: "https://open.spotify.com/embed/track/0C1EtOUMC0lhVenC2K7p2l?si=xI_FuuARTlOS1NcA3HZfmA"
             },
             {
                 title: "Aether",
-                spotifyEmbedUrl: "https://open.spotify.com/embed/track/4mE06s8TVm8Rg2E3Hff5E4?si=IcdjGUcjTpujlNWz7hTnfQ" // !!! REPLACE with actual URL !!!
+                spotifyEmbedUrl: "https://open.spotify.com/embed/track/4mE06s8TVm8Rg2E3Hff5E4?si=IcdjGUcjTpujlNWz7hTnfQ"
             },
             {
                 title: "Epic",
@@ -113,27 +119,21 @@
             },
             {
                 title: "Pink Synth",
-                spotifyEmbedUrl: "https://open.spotify.com/embed/track/2kCGjXPs6gZhCWvCgrpwvO?si=MKIXB0laRKKybm0rqbL7Rw" // Corrected from 'sptifyEmbedUrl'
+                spotifyEmbedUrl: "https://open.spotify.com/embed/track/2kCGjXPs6gZhCWvCgrpwvO?si=MKIXB0laRKKybm0rqbL7Rw"
             },
             {
                 title: "Hero",
-                spotifyEmbedUrl: "https://open.spotify.com/embed/track/4SssgRDdKudFTp86RCcOGY?si=TwM0GdQmQQ2URrx2SQMIeg" // Corrected from 'sptofyEmbedUrl'
+                spotifyEmbedUrl: "https://open.spotify.com/embed/track/4SssgRDdKudFTp86RCcOGY?si=TwM0GdQmQQ2URrx2SQMIeg"
             },
             {
                 title: "Conduit",
-                spotifyEmbedUrl: "https://open.spotify.com/embed/track/5kl5bAF9H2Q5zN7KyKWpbB?si=fcPBPPebRVC0emKaAJaz1A" // Corrected from 'sptifyEmbedUrl'
+                spotifyEmbedUrl: "https://open.spotify.com/embed/track/5kl5bAF9H2Q5zN7KyKWpbB?si=fcPBPPebRVC0emKaAJaz1A"
             }
-            // Add more songs here following the same format
-            // {
-            //     title: "New Track Name",
-            //     spotifyEmbedUrl: "YOUR_SPOTIFY_EMBED_URL_HERE"
-            // },
         ];
 
-        // Function to create and display song embeds
         function displaySongs() {
             const container = document.getElementById('all-songs-container');
-            container.innerHTML = ''; // Clear "Loading music..."
+            container.innerHTML = '';
 
             if (allSongs.length === 0) {
                 container.innerHTML = '<p>No music previews available yet. Check back soon!</p>';
@@ -142,16 +142,16 @@
 
             allSongs.forEach(song => {
                 const songDiv = document.createElement('div');
-                songDiv.className = 'song-preview'; // Add a class for styling
+                songDiv.className = 'song-preview';
 
-                const songTitle = document.createElement('h4'); // Use h4 for individual song titles
+                const songTitle = document.createElement('h4');
                 songTitle.textContent = song.title;
 
                 const iframe = document.createElement('iframe');
                 iframe.style.borderRadius = '12px';
-                iframe.src = song.spotifyEmbedUrl; // This is the property that was misspelled
+                iframe.src = song.spotifyEmbedUrl;
                 iframe.width = '100%';
-                iframe.height = '150'; // Use a smaller height for multiple previews (Spotify standard for single tracks)
+                iframe.height = '150'; // Make sure this matches your desired height from style.css for consistency
                 iframe.frameBorder = '0';
                 iframe.allowFullscreen = true;
                 iframe.allow = 'autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture';
@@ -163,7 +163,6 @@
             });
         }
 
-        // Call the function to display songs when the page loads
         document.addEventListener('DOMContentLoaded', displaySongs);
     </script>
 </body>
