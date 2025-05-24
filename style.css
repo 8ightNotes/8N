@@ -167,10 +167,11 @@ header {
 
 header h1 {
     font-family: 'Luckiest Guy', cursive; /* Applied Luckiest Guy font */
-    font-size: 3.5em; /* Slightly larger for emphasis */
+    font-size: 3em; /* Adjusted font size for one line on most screens */
     margin-bottom: 0.5rem;
     letter-spacing: 2px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Subtle text shadow for pop */
+    white-space: nowrap; /* Prevent text from wrapping by default */
 }
 
 header p {
@@ -425,7 +426,8 @@ footer {
 /* Responsive Design (for smaller screens) */
 @media (max-width: 768px) {
     header h1 {
-        font-size: 2.8em; /* Adjusted for smaller screens */
+        font-size: 2.2em; /* Further adjusted for smaller screens to ensure one line */
+        white-space: normal; /* Allow wrapping on very small screens if necessary */
     }
 
     header p {
