@@ -1,9 +1,15 @@
+/* Ensure HTML and Body have no default margins/paddings */
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
 /* General Body Styles */
 body {
     font-family: 'Open Sans', sans-serif;
     line-height: 1.6;
-    margin: 0;
-    padding: 0;
+    /* margin: 0; REMOVED from here, moved to html, body for consistency */
+    /* padding: 0; REMOVED from here, moved to html, body for consistency */
     background-color: #1a1a1a; /* Fallback dark background color if image doesn't load */
     color: #e0e0e0; /* Light text color */
     display: flex;
@@ -23,9 +29,20 @@ body {
 header {
     background-color: rgba(0, 0, 0, 0.8); /* Even darker for header with some transparency */
     color: #ffffff;
-    padding: 2rem 1rem;
-    text-align: center;
+    padding: 2rem 1rem; /* 2rem top/bottom, 1rem left/right */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+
+    /* --- FLEXBOX PROPERTIES FOR CENTERING TEXT (from previous iteration) --- */
+    display: flex;
+    flex-direction: column; /* Stack h1 and p vertically */
+    align-items: center;    /* Center children horizontally */
+    justify-content: center;
+    /* --- END FLEXBOX PROPERTIES --- */
+
+    /* --- NEW PROPERTIES FOR FULL WIDTH AND CORRECT BOX MODEL --- */
+    width: 100%;             /* Ensure the header takes full width of its parent (body) */
+    box-sizing: border-box;  /* Include padding in the element's total width */
+    /* --- END NEW PROPERTIES --- */
 }
 
 header h1 {
@@ -34,7 +51,6 @@ header h1 {
     margin-bottom: 0.5rem;
     letter-spacing: 2px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Subtle text shadow for pop */
-    text-align: center; /* ADDED THIS BACK */
 }
 
 header p {
@@ -42,7 +58,6 @@ header p {
     font-size: 1.2em;
     font-style: italic;
     color: #bbbbbb;
-    text-align: center; /* ADDED THIS BACK */
 }
 
 /* Main Content Area */
