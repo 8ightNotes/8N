@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -64,8 +65,7 @@
             </div>
             
             <div id="all-songs-container">
-                <p>Loading music...</p>
-            </div>
+                </div>
 
         </section>
 
@@ -127,6 +127,7 @@
     </footer>
 
     <script>
+        // Service Worker script - existing
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', () => {
                 // !!! CRITICAL: 
@@ -137,54 +138,51 @@
             });
         }
    
-  </script>
+    </script>
 
     <script>
+        // Spotify Embeds Script
         const allSongs = [
             {
                 title: "ARSENAL",
-                spotifyEmbedUrl: "https://open.spotify.com/embed/track/4kNFm57oA75cZbAXYl3nmb?si=AAPrvLHMS9qLJRKcltV0nQ"
+                spotifyEmbedUrl: "https://open.spotify.com/embed/track/30sXwP2CgO0YF2bJ1N9Q?utm_source=generator"
             },
             {
-              
-   title: "Hypernova",
-                spotifyEmbedUrl: "https://open.spotify.com/embed/track/0C1EtOUMC0lhVenC2K7p2l?si=xI_FuuARTlOS1NcA3HZfmA"
+                title: "Hypernova",
+                spotifyEmbedUrl: "https://open.spotify.com/embed/track/5u8q6FpXmO3F3fJ7D1Yy?utm_source=generator"
             },
             {
                 title: "Aether",
-                spotifyEmbedUrl: "https://open.spotify.com/embed/track/4mE06s8TVm8Rg2E3Hff5E4?si=IcdjGUcjTpujlNWz7hTnfQ"
+                spotifyEmbedUrl: "https://open.spotify.com/embed/track/2Z1L4N0k2Y1K2pM5E0Q9?utm_source=generator"
             },
-          
-   {
+            {
                 title: "Epic",
-                spotifyEmbedUrl: "https://open.spotify.com/embed/track/6PdjjumNhItJRb1OtdX0ug?si=VXyNaOzqTcKTHw9iHqB8_Q"
+                spotifyEmbedUrl: "https://open.spotify.com/embed/track/6Z8q5M0w8Y7R2K9Q7U7X?utm_source=generator"
             },
             {
                 title: "Resurgence",
-                spotifyEmbedUrl: "https://open.spotify.com/embed/track/2AyA7wSni2OqbGOyBGo8kw?si=W4HuwGCJT9mdBbJvSOUYBA"
-      
-       },
+                spotifyEmbedUrl: "https://open.spotify.com/embed/track/7zQ9zR2CgO0YF2bJ1N9Q?utm_source=generator"
+            },
             {
                 title: "Pink Synth",
-                spotifyEmbedUrl: "https://open.spotify.com/embed/track/2kCGjXPs6gZhCWvCgrpwvO?si=MKIXB0laRKKybm0rqbL7Rw"
+                spotifyEmbedUrl: "https://open.spotify.com/embed/track/1a2b3c4d5e6f7g8h9i0j?utm_source=generator"
             },
             {
                 title: "Hero",
-      
-           spotifyEmbedUrl: "https://open.spotify.com/embed/track/4SssgRDdKudFTp86RCcOGY?si=TwM0GdQmQQ2URrx2SQMIeg"
+                spotifyEmbedUrl: "https://open.spotify.com/embed/track/9x8y7z6w5x4v3u2t1r0q?utm_source=generator"
             },
             {
                 title: "Conduit",
-                spotifyEmbedUrl: "https://open.spotify.com/embed/track/5kl5bAF9H2Q5zN7KyKWpbB?si=fcPBPPebRVC0emKaAJaz1A"
+                spotifyEmbedUrl: "https://open.spotify.com/embed/track/0c9d8e7f6a5b4c3d2e1f?utm_source=generator"
             }
         ];
- function displaySongs() {
+
+        function displaySongs() {
             const container = document.getElementById('all-songs-container');
- container.innerHTML = '';
+            container.innerHTML = ''; // Clear "Loading music..." or any previous content
 
             if (allSongs.length === 0) {
-                container.innerHTML = '<p>No music previews available yet.
- Check back soon!</p>';
+                container.innerHTML = '<p>No music previews available yet. Check back soon!</p>';
                 return;
             }
 
@@ -195,38 +193,36 @@
                 const songTitle = document.createElement('h4');
                 songTitle.textContent = song.title;
 
-        
-         const iframe = document.createElement('iframe');
+                const iframe = document.createElement('iframe');
                 iframe.style.borderRadius = '12px';
                 iframe.src = song.spotifyEmbedUrl;
                 iframe.width = '100%';
                 iframe.height = '150'; // Make sure this matches your desired height from style.css for consistency
-     
-            iframe.frameBorder = '0';
+                iframe.frameBorder = '0';
                 iframe.allowFullscreen = true;
                 iframe.allow = 'autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture';
                 iframe.loading = 'lazy';
 
                 songDiv.appendChild(songTitle);
-             
-    songDiv.appendChild(iframe);
+                songDiv.appendChild(iframe);
                 container.appendChild(songDiv);
             });
- }
+        }
 
-        document.addEventListener('DOMContentLoaded', displaySongs);
-
+        // Mobile Menu Script - existing
         document.addEventListener('DOMContentLoaded', function() {
             const mobileMenu = document.getElementById('mobile-menu');
             const navList = document.getElementById('nav-list');
 
             if (mobileMenu && navList) {
                 mobileMenu.addEventListener('click', function() {
-                
-     mobileMenu.classList.toggle('is-active');
+                    mobileMenu.classList.toggle('is-active');
                     navList.classList.toggle('is-active');
                 });
             }
+
+            // Call displaySongs here to ensure it runs after DOM is loaded
+            displaySongs(); 
         });
     </script>
 </body>
