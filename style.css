@@ -334,6 +334,22 @@ section h2 {
 }
 /* --- End Collapsible Music List Styles --- */
 
+/* New style for download call-to-action */
+.download-cta {
+    text-align: center;
+    margin-top: 3rem; /* More space above it */
+    padding: 1.5rem;
+    background-color: rgba(42, 42, 42, 0.9); /* Matches other section backgrounds */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.download-cta p {
+    font-size: 1.1em;
+    margin-bottom: 1rem;
+    color: #e0e0e0; /* Match main text color */
+}
+
 /* News Section Specifics */
 article {
     background-color: rgba(58, 58, 58, 0.9); /* Slightly different background for articles with transparency */
@@ -489,3 +505,4 @@ footer {
         margin: 0.5rem 0;
     }
     }
+    
