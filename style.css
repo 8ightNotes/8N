@@ -231,9 +231,15 @@ section h2 {
     font-size: 1.35em; /* Increased font size by 35% */
     display: flex;
     align-items: center;
+    justify-content: center; /* NEW: Center content horizontally inside the button */
     gap: 12px; /* Increased gap slightly */
     transition: background-color 0.3s ease, transform 0.2s ease;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Add a subtle shadow to buttons */
+
+    /* NEW: Flexbox properties for equal width distribution */
+    flex: 1; /* Allow to grow/shrink equally */
+    min-width: 280px; /* Set a minimum width before wrapping, adjust as needed for desired visual size */
+    box-sizing: border-box; /* Include padding in the element's total width */
 }
 
 .music-links a:hover {
@@ -452,10 +458,14 @@ footer {
         padding: 0.9rem 1.5rem; /* Adjusted padding for mobile (from 0.7rem 1rem) */
         font-size: 1.2em; /* Adjusted font size for mobile (from 1em) */
         gap: 8px; /* Adjusted gap */
+        width: 100%; /* NEW: Make them take full width of the container on mobile */
+        max-width: none; /* NEW: Remove any desktop max-width constraints */
+        min-width: unset; /* NEW: Reset min-width for mobile stacking */
     }
 
     /* Adjust icon size for mobile view */
     .music-links i {
+        color: #ffffff; /* Make the icons white for good contrast on the cyan button */
         font-size: 2em; /* Adjusted icon size for mobile (from 1.5em) */
         margin-right: 0; /* No right margin when stacked */
         margin-bottom: 5px; /* Add bottom margin to separate from text */
