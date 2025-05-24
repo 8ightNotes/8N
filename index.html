@@ -4,166 +4,129 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>8ight Notes Official</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Montserrat:wght@400;700&family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="manifest" href="manifest.json">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="site-title">8IGHT NOTES</a>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-list" id="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#news">News</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
     <header>
-        <h1>8ight Notes</h1>
-        <p>Musician | Songwriter | Performer</p>
+        <h1>8IGHT NOTES OFFICIAL</h1>
+        <p>The Official Site for all things 8IGHT NOTES</p>
     </header>
 
     <main>
         <section id="bio">
             <h2>About Me</h2>
-            <p>Welcome to my official artist page! I'm 8ight Notes, an emerging artist dedicated to creating music that connects and inspires. My sound blends Amapiano with Afrobeat tracks, alongside dubstep, trap, emo rap, hip hop, a vast amount of different genres. I believe music is a powerful medium for storytelling and emotional expression, and I pour my heart into every note.</p>
-            <p>Stay tuned for new releases, upcoming announcements, and more!</p>
+            <p>Welcome to my official artist page! I'm 8IGHT NOTES, a musician, songwriter, and performer driven by a passion for creating unique soundscapes. My music blends various genres to deliver a fresh and immersive experience. Explore my latest tracks, stay updated on news, and connect with me across social media. Thank you for visiting and being a part of my musical journey.</p>
         </section>
 
         <section id="music">
             <h2>My Music</h2>
             <div class="music-links">
-                <a href="https://open.spotify.com/artist/0ROryJECCuLxfOlmHWjmt2?si=AlseOgG7T5u394IrhTtq5A" target="_blank">
-                    <i class="fab fa-spotify fa-2x"></i> Listen on Spotify
-                </a>
-                <a href="https://music.apple.com/us/artist/8ight-notes/1812975945" target="_blank">
-                    <i class="fab fa-apple fa-2x"></i> Listen on Apple Music
-                </a>
-                <a href="https://youtube.com/@8ight_notes?si=Dji1ToshHlBB_rfU" target="_blank">
-                    <i class="fab fa-youtube fa-2x"></i> Watch on YouTube
-                </a>
+                <a href="https://open.spotify.com/artist/YOUR_SPOTIFY_ID" target="_blank"><i class="fab fa-spotify"></i>Spotify</a>
+                <a href="https://music.apple.com/artist/YOUR_APPLE_MUSIC_ID" target="_blank"><i class="fab fa-apple"></i>Apple Music</a>
+                <a href="https://www.youtube.com/channel/YOUR_YOUTUBE_CHANNEL_ID" target="_blank"><i class="fab fa-youtube"></i>YouTube</a>
             </div>
-            <h3>Latest Releases</h3>
-            <div id="all-songs-container">
-                <p>Loading music...</p>
-            </div>
+
+            <p style="text-align: center;">Click on a song title to play!</p>
+            <div id="collapsible-music-list">
+                <details class="song-collapsible">
+                    <summary>ARSENAL (Official Single)</summary>
+                    <div class="audio-player-container">
+                        <audio controls>
+                            <source src="songs/ARSENAL.mp3" type="audio/mpeg">
+                            Your browser does not support the audio element.
+                        </audio>
+                        <p class="song-description">A powerful blend of intense beats and atmospheric melodies. Released May 24, 2025.</p>
+                    </div>
+                </details>
+
+                <details class="song-collapsible">
+                    <summary>Dreamscape Odyssey</summary>
+                    <div class="audio-player-container">
+                        <audio controls>
+                            <source src="songs/DreamscapeOdyssey.mp3" type="audio/mpeg">
+                            Your browser does not support the audio element.
+                        </audio>
+                        <p class="song-description">An ethereal journey through cinematic soundscapes. Unreleased demo.</p>
+                    </div>
+                </details>
+
+                </div>
         </section>
 
         <section id="news">
             <h2>Latest News</h2>
             <article>
                 <h3>New Single "ARSENAL" Out Now!</h3>
-                <p class="date">May 21, 2025</p>
-                <p>Excited to announce my new single "ARSENAL" is officially out on all streaming platforms! This track is very special to me, Go give it a listen!</p>
-                <a href="https://open.spotify.com/track/4kNFm57oA75cZbAXYl3nmb?si=AAPrvLHMS9qLJRKcltV0nQ" target="_blank" class="button">Stream "ARSENAL"</a>
+                <span class="date">May 24, 2025</span>
+                <p>Exciting news! My latest single, "ARSENAL," is officially out now on all major streaming platforms. This track is a powerful blend of intense beats and atmospheric melodies, representing a new direction in my sound. Go stream it, add it to your playlists, and let me know what you think!</p>
+                <a href="https://distrokid.com/hyperfollow/8ightnotes/arsenal" target="_blank" class="button">Listen Now</a>
             </article>
+
             <article>
-                <h3>More songs coming up on June, stay tuned for more</h3>
-                <p class="date">June 1, 2025</p>
-                <p>Catch it all live on Spotify and all other platforms!</p>
+                <h3>More songs coming up on June, stay tuned!</h3>
+                <span class="date">May 10, 2025</span>
+                <p>Get ready for more new music! I'm thrilled to announce that several new tracks will be dropping throughout June. I've been working hard in the studio to bring you fresh sounds and experiences. Make sure you're subscribed to my newsletter and following me on social media so you don't miss any announcements!</p>
             </article>
         </section>
 
-        <section id="contact">
-            <h2>Connect With Me</h2>
-            <div class="social-links">
-                <a href="https://www.instagram.com/8ight_notes" target="_blank">Instagram</a>
-                <a href="https://www.facebook.com/8ightNotes.official" target="_blank">Facebook</a>
-                <a href="https://twitter.com/8ight_notes" target="_blank">Twitter / X</a>
-                <a href="https://www.tiktok.com/@8ight_notes" target="_blank">TikTok</a>
-                <a href="mailto:8ightnotes01@gmail.com">Email Me</a>
-            </div>
-
-            <h3 class="tiktok-heading">Follow me on TikTok!</h3>
+        <section id="tiktok">
+            <h2 class="tiktok-heading">Latest TikToks</h2>
             <div class="tiktok-embed-container">
-                <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@8ight_notes" data-unique-id="8ight_notes" data-embed-from="embed_page" data-embed-type="creator" style="max-width:780px; min-width:288px;">
-                    <section>
-                        <a target="_blank" href="https://www.tiktok.com/@8ight_notes?refer=creator_embed">@8ight_notes</a>
-                    </section>
-                </blockquote>
-                <script async src="https://www.tiktok.com/embed.js"></script>
+                <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@8ightnotes_official/video/YOUR_TIKTOK_VIDEO_ID" data-video-id="YOUR_TIKTOK_VIDEO_ID" style="max-width: 605px;min-height: 400px;" > <section> <a target="_blank" title="@8ightnotes_official" href="https://www.tiktok.com/@8ightnotes_official?refer=embed">@8ightnotes_official</a> <p></p> <a target="_blank" title="♬ original sound - 8IGHT NOTES" href="https://www.tiktok.com/music/original-sound-7369324056262441770">♬ original sound - 8IGHT NOTES</a> </section> </blockquote> <script async src="https://www.tiktok.com/embed.js"></script>
             </div>
-            </section>
+            <p style="text-align: center; color: #bbbbbb;">Follow me on TikTok for more behind-the-scenes content and exclusive snippets!</p>
+        </section>
+
+        <section id="contact">
+            <h2>Connect with Me</h2>
+            <p style="text-align: center;">I love connecting with my fans! Reach out on my social media channels or send me a message.</p>
+            <div class="social-links">
+                <a href="https://instagram.com/8ightnotes_official" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+                <a href="https://twitter.com/8ightnotes_official" target="_blank"><i class="fab fa-twitter"></i> X (Twitter)</a>
+                <a href="https://facebook.com/8ightnotes_official" target="_blank"><i class="fab fa-facebook-f"></i> Facebook</a>
+                <a href="mailto:8ightnotes.contact@email.com"><i class="fas fa-envelope"></i> Email</a>
+            </div>
+        </section>
     </main>
 
     <footer>
-        <p>© 2025 8ight Notes. All rights reserved.</p>
+        <p>© 2025 8IGHT NOTES. All rights reserved.</p>
     </footer>
 
     <script>
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', () => {
-                // !!! CRITICAL: REPLACE 'YOUR_REPOSITORY_NAME' below with your actual GitHub repository name !!!
-                navigator.serviceWorker.register('/YOUR_REPOSITORY_NAME/service-worker.js')
-                    .then(reg => console.log('Service Worker registered successfully!', reg))
-                    .catch(err => console.log('Service Worker registration failed:', err));
-            });
-        }
-    </script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            const navList = document.getElementById('nav-list');
 
-    <script>
-        const allSongs = [
-            {
-                title: "ARSENAL",
-                spotifyEmbedUrl: "https://open.spotify.com/embed/track/4kNFm57oA75cZbAXYl3nmb?si=AAPrvLHMS9qLJRKcltV0nQ"
-            },
-            {
-                title: "Hypernova",
-                spotifyEmbedUrl: "https://open.spotify.com/embed/track/0C1EtOUMC0lhVenC2K7p2l?si=xI_FuuARTlOS1NcA3HZfmA"
-            },
-            {
-                title: "Aether",
-                spotifyEmbedUrl: "https://open.spotify.com/embed/track/4mE06s8TVm8Rg2E3Hff5E4?si=IcdjGUcjTpujlNWz7hTnfQ"
-            },
-            {
-                title: "Epic",
-                spotifyEmbedUrl: "https://open.spotify.com/embed/track/6PdjjumNhItJRb1OtdX0ug?si=VXyNaOzqTcKTHw9iHqB8_Q"
-            },
-            {
-                title: "Resurgence",
-                spotifyEmbedUrl: "https://open.spotify.com/embed/track/2AyA7wSni2OqbGOyBGo8kw?si=W4HuwGCJT9mdBbJvSOUYBA"
-            },
-            {
-                title: "Pink Synth",
-                spotifyEmbedUrl: "https://open.spotify.com/embed/track/2kCGjXPs6gZhCWvCgrpwvO?si=MKIXB0laRKKybm0rqbL7Rw"
-            },
-            {
-                title: "Hero",
-                spotifyEmbedUrl: "https://open.spotify.com/embed/track/4SssgRDdKudFTp86RCcOGY?si=TwM0GdQmQQ2URrx2SQMIeg"
-            },
-            {
-                title: "Conduit",
-                spotifyEmbedUrl: "https://open.spotify.com/embed/track/5kl5bAF9H2Q5zN7KyKWpbB?si=fcPBPPebRVC0emKaAJaz1A"
+            if (mobileMenu && navList) {
+                mobileMenu.addEventListener('click', function() {
+                    mobileMenu.classList.toggle('is-active');
+                    navList.classList.toggle('is-active');
+                });
             }
-        ];
-
-        function displaySongs() {
-            const container = document.getElementById('all-songs-container');
-            container.innerHTML = '';
-
-            if (allSongs.length === 0) {
-                container.innerHTML = '<p>No music previews available yet. Check back soon!</p>';
-                return;
-            }
-
-            allSongs.forEach(song => {
-                const songDiv = document.createElement('div');
-                songDiv.className = 'song-preview';
-
-                const songTitle = document.createElement('h4');
-                songTitle.textContent = song.title;
-
-                const iframe = document.createElement('iframe');
-                iframe.style.borderRadius = '12px';
-                iframe.src = song.spotifyEmbedUrl;
-                iframe.width = '100%';
-                iframe.height = '150'; // Make sure this matches your desired height from style.css for consistency
-                iframe.frameBorder = '0';
-                iframe.allowFullscreen = true;
-                iframe.allow = 'autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture';
-                iframe.loading = 'lazy';
-
-                songDiv.appendChild(songTitle);
-                songDiv.appendChild(iframe);
-                container.appendChild(songDiv);
-            });
-        }
-
-        document.addEventListener('DOMContentLoaded', displaySongs);
+        });
     </script>
 </body>
 </html>
