@@ -204,6 +204,31 @@ article h3 {
     transform: translateY(-3px);
 }
 
+/* Styling for the TikTok embed */
+.tiktok-heading {
+    font-family: 'Luckiest Guy', cursive; /* Match your other headings */
+    color: #00bcd4;
+    text-align: center;
+    margin-top: 2rem; /* Add some space above the heading */
+    margin-bottom: 1rem;
+    font-size: 2em; /* Adjust as needed */
+}
+
+.tiktok-embed-container {
+    display: flex;
+    justify-content: center; /* Center the TikTok blockquote */
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Ensure the blockquote itself is responsive within its max-width */
+.tiktok-embed {
+    width: 100%; /* Make sure it takes full width of its container up to max-width */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add a subtle shadow */
+    border-radius: 8px; /* Match other elements' rounded corners */
+    overflow: hidden; /* Important for border-radius on embeds */
+}
+
 /* Footer Styles */
 footer {
     background-color: rgba(0, 0, 0, 0.8); /* Darker footer with some transparency */
@@ -259,9 +284,14 @@ footer {
         font-size: 1.1em;
     }
 
+    /* Responsive adjustments for TikTok embed */
+    .tiktok-heading {
+        font-size: 1.8em; /* Smaller on mobile */
+    }
 
     .social-links a {
         display: block; /* Stack social links vertically */
         margin: 0.5rem 0;
     }
-}
+                           }
+    
