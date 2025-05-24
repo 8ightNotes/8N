@@ -34,6 +34,7 @@ header h1 {
     margin-bottom: 0.5rem;
     letter-spacing: 2px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Subtle text shadow for pop */
+    text-align: center; /* ADDED THIS BACK */
 }
 
 header p {
@@ -41,6 +42,7 @@ header p {
     font-size: 1.2em;
     font-style: italic;
     color: #bbbbbb;
+    text-align: center; /* ADDED THIS BACK */
 }
 
 /* Main Content Area */
@@ -293,5 +295,4 @@ footer {
         display: block; /* Stack social links vertically */
         margin: 0.5rem 0;
     }
-                           }
-    
+}
