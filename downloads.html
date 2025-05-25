@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Downloads - 8IGHT NOTES</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Montserrat:wght@400;700&family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="site-title">8IGHT NOTES</a>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-list" id="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#news">News</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+                <li><a href="downloads.html">Download</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header>
+        <h1>DOWNLOAD MY MUSIC</h1>
+        <p>Get high-quality versions of my tracks here.</p>
+    </header>
+
+    <main>
+        <section id="download-section">
+            <h2>Available Downloads</h2>
+            <div class="download-list">
+                <div class="download-item">
+                    <h3>ARSENAL</h3>
+                    <p>High-quality WAV file.</p>
+                    <a href="https://www.dropbox.com/scl/fi/1s29gf2fkn6oqqpi90pym/ARSENAL.wav?rlkey=y01f9wl4im0zjnvi67fcpwp6v&st=vb6n9nmo&dl=0" class="button" download><i class="fas fa-download"></i> Download WAV</a>
+                </div>
+                <div class="download-item">
+                    <h3>Hypernova</h3>
+                    <p>High-quality MP3 file.</p>
+                    <a href="https://www.dropbox.com/scl/fi/1881wb83ljb6fe8udnv0k/Hypenova.mp3?rlkey=w6ca5aebo80l11e2y0y88de93&st=s8e9kqc1&dl=0" class="button" download><i class="fas fa-download"></i> Download MP3</a>
+                </div>
+                 <div class="download-item">
+                    <h3>Pink Synth</h3>
+                    <p>High-quality MP3 file.</p>
+                    <a href="https://www.dropbox.com/scl/fi/6qxp2ww8izvhmq9myy5ep/Pink-Synth.mp3?rlkey=cdu2ejmrh7u8r6y9a8gjyc0xu&st=1xwclhsk&dl=0" class="button" download><i class="fas fa-download"></i> Download MP3</a>
+                </div>
+                <div class="download-item">
+                    <h3>Conduit</h3>
+                    <p>High-quality MP3 file.</p>
+                    <a href="https://www.dropbox.com/scl/fi/xbux53ifohm1v3yweasmd/Conduit.mp3?rlkey=xjrx54ohayp5zenm6k9crxtow&st=ci1yi63i&dl=0" class="button" download><i class="fas fa-download"></i> Download MP3</a>
+                </div>
+                <div class="download-item">
+                    <h3>HERO</h3>
+                    <p>High-quality MP3 file.</p>
+                    <a href="https://www.dropbox.com/scl/fi/gbzlc7oypk0sirwxxjyfn/HERO.mp3?rlkey=lsq7hxtbmtcc1k949i6vl5h2k&st=s8dv4m7l&dl=0" class="button" download><i class="fas fa-download"></i> Download MP3</a>
+                </div>
+                <div class="download-item">
+                    <h3>EPIC</h3>
+                    <p>High-quality MP3 file.</p>
+                    <a href="https://www.dropbox.com/scl/fi/xq3rutc2mtba9rnx9z1sn/EPIC.mp3?rlkey=kyllm0c7ay235ormqj6zv1eg4&st=ccxdnak1&dl=0" class="button" download><i class="fas fa-download"></i> Download MP3</a>
+<a href="https://www.dropbox.com/scl/fi/r5jwzhrya65gpphjr52y0/Resurgence.mp3?rlkey=bd8cqrti18q5jx6uishx3vbg6&st=i58k3jz5&dl=0" class="button" download>
+  <i class="fas fa-download"></i> Download MP3
+</a>
+<a href="https://www.dropbox.com/scl/fi/4byonuc68zkmh2fgibnkb/Aether.mp3?rlkey=mfrfdh1u4bmhwroom9ziw225i&st=7cmsfqb5&dl=0" class="button" download>
+  <i class="fas fa-download"></i> Download MP3
+</a>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 8IGHT NOTES. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Mobile Menu Script
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            const navList = document.getElementById('nav-list');
+
+            if (mobileMenu && navList) {
+                mobileMenu.addEventListener('click', function() {
+                    mobileMenu.classList.toggle('is-active');
+                    navList.classList.toggle('is-active');
+                });
+            }
+        });
+    </script>
+</body>
+</html>
