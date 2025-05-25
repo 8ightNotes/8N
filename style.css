@@ -2,16 +2,15 @@
 html, body {
     margin: 0;
     padding: 0;
-} [cite: 2]
+}
 
 /* General Body Styles */
 body {
     font-family: 'Open Sans', sans-serif;
     line-height: 1.6;
-    [cite_start]background-color: #ffffff;
+    background-color: #1a1a1a; /* Changed to a dark gray for dark mode */
 /* Fallback dark background color if image doesn't load */
-    color: #e0e0e0;
-/* Light text color */
+    color: #e0e0e0; /* Light text color */
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -32,8 +31,7 @@ body {
 
 /* --- Navigation Styles --- */
 .navbar {
-    background-color: #ffffff;
-/* Slightly darker, more opaque than header */
+    background-color: #2a2a2a; /* Darker for navbar */
     padding: 1rem 0;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
     position: sticky;
@@ -143,7 +141,7 @@ body {
         position: absolute;
         top: 60px; /* Adjust based on navbar height */
         left: 0;
-        background-color: #ffffff;
+        background-color: #2a2a2a; /* Darker for mobile nav list */
         box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
         padding: 1rem 0;
     }
@@ -168,8 +166,7 @@ body {
 
 /* Header Styles */
 header {
-    background-color: #ffffff;
-/* Even darker for header with some transparency */
+    background-color: #222222; /* Darker for header with some transparency */
     color: #00FFFF;
     padding: 2rem 1rem;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
@@ -453,8 +450,7 @@ article h3 {
 
 /* Footer Styles */
 footer {
-    background-color: #ffffff;
-/* Darker footer with some transparency */
+    background-color: #222222; /* Darker footer with some transparency */
     color: #aaaaaa;
     text-align: center;
     padding: 1.5rem 1rem;
