@@ -131,7 +131,7 @@
             window.addEventListener('load', () => {
                 // !!! CRITICAL: 
  REPLACE 'YOUR_REPOSITORY_NAME' below with your actual GitHub repository name !!!
-                navigator.serviceWorker.register('/YOUR_REPOSITORY_NAME/service-worker.js')
+                navigator.serviceWorker.register('/service-worker.js/service-worker.js')
                     .then(reg => console.log('Service Worker registered successfully!', reg))
                     .catch(err => console.log('Service Worker registration failed:', err));
             });
@@ -195,7 +195,7 @@
                 iframe.style.borderRadius = '12px';
                 iframe.src = song.spotifyEmbedUrl;
                 iframe.width = '100%';
-                iframe.height = '150'; 
+                iframe.height = '50'; 
                 iframe.frameBorder = '0';
                 iframe.allowFullscreen = true;
                 iframe.allow = 'autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture';
