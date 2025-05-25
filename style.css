@@ -1,103 +1,103 @@
 /* Ensure HTML and Body have no default margins/paddings */
 html, body {
-    margin: 0;
-    padding: 0;
-} [cite: 2]
+    margin: 0; [cite: 1]
+    padding: 0; [cite: 1]
+}
 
 /* General Body Styles */
 body {
     font-family: 'Open Sans', sans-serif;
     line-height: 1.6;
-    [cite_start]background-color: #1a1a1a;
-/* Fallback dark background color if image doesn't load */
-    color: #e0e0e0;
-/* Light text color */
+    background-color: #1a1a1a; [cite: 2]
+    /* Fallback dark background color if image doesn't load */ [cite: 3]
+    color: #e0e0e0; [cite: 4]
+    /* Light text color */ [cite: 4]
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
-/* Ensures footer sticks to bottom if content is short */
+    min-height: 100vh; [cite: 5]
+    /* Ensures footer sticks to bottom if content is short */ [cite: 5]
 
     /* --- BACKGROUND IMAGE PROPERTIES --- */
-    background-image: url('images/8ightnotesimage.jpg');
-/* Corrected path */
+    background-image: url('images/8ightnotesimage.jpg'); [cite: 6]
+    /* Corrected path */ [cite: 6]
     background-size: cover; /* Ensures the image covers the entire body */
-    background-position: center center;
-/* Centers the image */
-    background-repeat: no-repeat;
-/* Prevents the image from repeating */
-    background-attachment: fixed;
-/* Makes the background fixed as you scroll */
+    background-position: center center; [cite: 7]
+    /* Centers the image */ [cite: 7]
+    background-repeat: no-repeat; [cite: 8]
+    /* Prevents the image from repeating */ [cite: 8]
+    background-attachment: fixed; [cite: 9]
+    /* Makes the background fixed as you scroll */ [cite: 9]
     /* --- END BACKGROUND IMAGE PROPERTIES --- */
 }
 
 /* --- Navigation Styles --- */
 .navbar {
-    background-color: rgba(0, 0, 0, 0.9);
-/* Slightly darker, more opaque than header */
-    padding: 1rem 0;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
-    position: sticky;
-/* Makes it stick to the top when scrolling */
+    background-color: rgba(0, 0, 0, 0.9); [cite: 10]
+    /* Slightly darker, more opaque than header */ [cite: 10]
+    padding: 1rem 0; [cite: 11]
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); [cite: 11]
+    position: sticky; [cite: 12]
+    /* Makes it stick to the top when scrolling */ [cite: 12]
     top: 0;
-    z-index: 1000;
-/* Ensures it stays on top of other content */
+    z-index: 1000; [cite: 13]
+    /* Ensures it stays on top of other content */ [cite: 13]
     width: 100%;
-    box-sizing: border-box;
+    box-sizing: border-box; [cite: 14]
 }
 
 .navbar .container {
     display: flex;
-    justify-content: space-between;
-/* Pushes title to left, menu to right */
+    justify-content: space-between; [cite: 15]
+    /* Pushes title to left, menu to right */ [cite: 15]
     align-items: center;
-    max-width: 900px;
-/* Match your main content width */
+    max-width: 900px; [cite: 16]
+    /* Match your main content width */ [cite: 16]
     margin: 0 auto;
-    padding: 0 1rem;
-/* Padding for small screens */
+    padding: 0 1rem; [cite: 17]
+    /* Padding for small screens */ [cite: 17]
 }
 
 .site-title {
     font-family: 'Luckiest Guy', cursive;
-    color: #00bcd4;
-/* Accent color */
+    color: #00bcd4; [cite: 18]
+    /* Accent color */ [cite: 18]
     font-size: 2em;
     text-decoration: none;
     letter-spacing: 1px;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); [cite: 19]
 }
 
 .nav-list {
     list-style: none;
     margin: 0;
     padding: 0;
-    display: flex; /* Display list items in a row */
+    display: flex; /* Display list items in a row */ [cite: 20]
 }
 
 .nav-list li a {
     color: #ffffff;
     text-decoration: none;
-    padding: 0.8rem 1.2rem;
+    padding: 0.8rem 1.2rem; [cite: 21]
     display: block;
     transition: background-color 0.3s ease, color 0.3s ease;
     border-radius: 4px;
-    font-weight: bold;
+    font-weight: bold; [cite: 22]
 }
 
 .nav-list li a:hover {
     background-color: #00bcd4; /* Accent color on hover */
-    color: #000000;
+    color: #000000; [cite: 23]
 }
 
 /* Mobile Menu (Hamburger) Styles */
 .menu-toggle {
-    display: none;
-/* Hidden by default on larger screens */
+    display: none; [cite: 24]
+    /* Hidden by default on larger screens */ [cite: 24]
     flex-direction: column;
     justify-content: space-between;
     width: 30px;
     height: 20px;
-    cursor: pointer;
+    cursor: pointer; [cite: 25]
 }
 
 .menu-toggle .bar {
@@ -105,62 +105,62 @@ body {
     width: 100%;
     background-color: #ffffff;
     border-radius: 10px;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out; [cite: 26]
 }
 
 /* Animation for Hamburger to X */
 .menu-toggle.is-active .bar:nth-child(2) {
-    opacity: 0;
-/* Middle bar disappears */
+    opacity: 0; [cite: 27]
+    /* Middle bar disappears */ [cite: 27]
 }
 
 .menu-toggle.is-active .bar:nth-child(1) {
-    transform: translateY(8px) rotate(45deg);
-/* Top bar rotates */
+    transform: translateY(8px) rotate(45deg); [cite: 28]
+    /* Top bar rotates */ [cite: 28]
 }
 
 .menu-toggle.is-active .bar:nth-child(3) {
-    transform: translateY(-8px) rotate(-45deg);
-/* Bottom bar rotates */
+    transform: translateY(-8px) rotate(-45deg); [cite: 29]
+    /* Bottom bar rotates */ [cite: 29]
 }
 
 /* Media Query for Mobile Navigation */
 @media (max-width: 768px) {
     .navbar .container {
-        justify-content: space-between;
+        justify-content: space-between; [cite: 30]
     }
 
     .menu-toggle {
-        display: flex;
-/* Show hamburger on small screens */
+        display: flex; [cite: 31]
+        /* Show hamburger on small screens */ [cite: 31]
     }
 
     .nav-list {
-        display: none;
-/* Hide nav list by default on small screens */
-        flex-direction: column;
-        width: 100%;
+        display: none; [cite: 32]
+        /* Hide nav list by default on small screens */ [cite: 32]
+        flex-direction: column; [cite: 33]
+        width: 100%; [cite: 33]
         position: absolute;
         top: 60px; /* Adjust based on navbar height */
         left: 0;
-        background-color: rgba(0, 0, 0, 0.95);
+        background-color: rgba(0, 0, 0, 0.95); [cite: 34]
         box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
-        padding: 1rem 0;
+        padding: 1rem 0; [cite: 35]
     }
 
     .nav-list.is-active {
-        display: flex;
-/* Show nav list when active */
+        display: flex; [cite: 36]
+        /* Show nav list when active */ [cite: 36]
     }
 
     .nav-list li {
-        text-align: center;
-        margin: 0.5rem 0;
+        text-align: center; [cite: 37]
+        margin: 0.5rem 0; [cite: 37]
     }
 
     .nav-list li a {
-        padding: 1rem 1.5rem;
-        font-size: 1.1em;
+        padding: 1rem 1.5rem; [cite: 38]
+        font-size: 1.1em; [cite: 38]
     }
 }
 /* --- End Navigation Styles --- */
@@ -168,148 +168,154 @@ body {
 
 /* Header Styles */
 header {
-    background-color: rgba(0, 0, 0, 0.8);
-/* Even darker for header with some transparency */
+    background-color: rgba(0, 0, 0, 0.8); [cite: 39]
+    /* Even darker for header with some transparency */ [cite: 39]
     color: #ffffff;
-    padding: 2rem 1rem;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    padding: 2rem 1rem; [cite: 40]
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); [cite: 40]
 
     /* --- FLEXBOX PROPERTIES FOR CENTERING TEXT --- */
-    display: flex;
-    flex-direction: column; /* Stack h1 and p vertically */
-    align-items: center;
-/* Center children horizontally */
-    justify-content: center;
-/* --- END FLEXBOX PROPERTIES --- */
+    display: flex; [cite: 41]
+    flex-direction: column; /* Stack h1 and p vertically */ [cite: 41]
+    align-items: center; [cite: 42]
+    /* Center children horizontally */ [cite: 42]
+    justify-content: center; [cite: 43]
+    /* --- END FLEXBOX PROPERTIES --- */
 
     /* --- PROPERTIES FOR FULL WIDTH AND CORRECT BOX MODEL --- */
-    width: 100%;
-/* Ensure the header takes full width of its parent (body) */
-    box-sizing: border-box;
-/* Include padding in the element's total width */
+    width: 100%; [cite: 44]
+    /* Ensure the header takes full width of its parent (body) */ [cite: 44]
+    box-sizing: border-box; [cite: 45]
+    /* Include padding in the element's total width */ [cite: 45]
     /* --- END NEW PROPERTIES --- */
 }
 
 header h1 {
-    font-family: 'Luckiest Guy', cursive;
-/* Applied Luckiest Guy font */
-    font-size: 3em;
-/* Adjusted font size for one line on most screens */
+    font-family: 'Luckiest Guy', cursive; [cite: 46]
+    /* Applied Luckiest Guy font */ [cite: 46]
+    font-size: 3em; [cite: 47]
+    /* Adjusted font size for one line on most screens */ [cite: 47]
     margin-bottom: 0.5rem;
     letter-spacing: 2px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Subtle text shadow for pop */
-    white-space: nowrap;
-/* Prevent text from wrapping by default */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Subtle text shadow for pop */ [cite: 48]
+    white-space: nowrap; [cite: 49]
+    /* Prevent text from wrapping by default */ [cite: 49]
 }
 
 header p {
-    font-family: 'Montserrat', sans-serif;
-/* Kept Montserrat for readability */
+    font-family: 'Montserrat', sans-serif; [cite: 50]
+    /* Kept Montserrat for readability */ [cite: 50]
     font-size: 1.2em;
     font-style: italic;
-    color: #bbbbbb;
+    color: #bbbbbb; [cite: 51]
 }
 
 /* Main Content Area */
 main {
-    flex-grow: 1;
-/* Allows main content to take up available space */
+    flex-grow: 1; [cite: 52]
+    /* Allows main content to take up available space */ [cite: 52]
     padding: 2rem 1rem;
-    max-width: 900px;
-/* Max width for content to keep it readable */
-    margin: 0 auto;
-/* Center the content */
+    max-width: 900px; [cite: 53]
+    /* Max width for content to keep it readable */ [cite: 53]
+    margin: 0 auto; [cite: 54]
+    /* Center the content */ [cite: 54]
 }
 
 section {
-    background-color: rgba(42, 42, 42, 0.9);
-/* Slightly lighter dark for sections with transparency */
+    background-color: rgba(42, 42, 42, 0.9); [cite: 55]
+    /* Slightly lighter dark for sections with transparency */ [cite: 55]
     margin-bottom: 2rem;
     padding: 2rem;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); [cite: 56]
 }
 
+/* Added for paragraphs within sections */
+section p {
+    color: #e0e0e0; /* Light text color for all paragraphs in sections */
+}
+
+
 section h2 {
-    font-family: 'Luckiest Guy', cursive;
-/* Applied Luckiest Guy font */
-    color: #00bcd4;
-/* A vibrant accent color (cyan) */
+    font-family: 'Luckiest Guy', cursive; [cite: 57]
+    /* Applied Luckiest Guy font */ [cite: 57]
+    color: #00bcd4; [cite: 58]
+    /* A vibrant accent color (cyan) */ [cite: 58]
     text-align: center;
     margin-bottom: 1.5rem;
-    font-size: 2.5em;
-/* Slightly larger for section titles */
+    font-size: 2.5em; [cite: 59]
+    /* Slightly larger for section titles */ [cite: 59]
     border-bottom: 2px solid #00bcd4;
     padding-bottom: 0.5rem;
-    display: inline-block;
-/* To make border-bottom only as wide as text */
+    display: inline-block; [cite: 60]
+    /* To make border-bottom only as wide as text */ [cite: 60]
     margin-left: auto;
     margin-right: auto;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Subtle text shadow */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Subtle text shadow */ [cite: 61]
 }
 
 /* Music Links (Spotify, Apple, YouTube Buttons) */
 .music-links {
-    display: flex;
-    flex-wrap: wrap; /* Allows links to wrap on smaller screens */
+    display: flex; [cite: 62]
+    flex-wrap: wrap; /* Allows links to wrap on smaller screens */ [cite: 62]
     justify-content: center;
-    gap: 1.5rem;
-/* Space between links */
+    gap: 1.5rem; [cite: 63]
+    /* Space between links */ [cite: 63]
     margin-top: 1.5rem;
     margin-bottom: 2rem;
 }
 
 .music-links a {
-    background-color: #00bcd4;
-/* Accent color for buttons/links */
-    color: #000000;
-/* Dark text for contrast */
-    padding: 1.1rem 2rem;
-/* Adjusted from 0.8rem 1.5rem for ~35% increase */
+    background-color: #00bcd4; [cite: 64]
+    /* Accent color for buttons/links */ [cite: 64]
+    color: #000000; [cite: 65]
+    /* Dark text for contrast */ [cite: 65]
+    padding: 1.1rem 2rem; [cite: 66]
+    /* Adjusted from 0.8rem 1.5rem for ~35% increase */ [cite: 66]
     border-radius: 5px;
     text-decoration: none;
     font-weight: bold;
-    font-size: 1.35em;
-/* Increased font size by 35% */
+    font-size: 1.35em; [cite: 67]
+    /* Increased font size by 35% */ [cite: 67]
     display: flex;
     align-items: center;
-    justify-content: center;
-/* NEW: Center content horizontally inside the button */
-    gap: 12px;
-/* Increased gap slightly */
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Add a subtle shadow to buttons */
+    justify-content: center; [cite: 68]
+    /* NEW: Center content horizontally inside the button */ [cite: 68]
+    gap: 12px; [cite: 69]
+    /* Increased gap slightly */ [cite: 69]
+    transition: background-color 0.3s ease, transform 0.2s ease; [cite: 70]
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Add a subtle shadow to buttons */ [cite: 70]
 
     /* NEW: Flexbox properties for equal width distribution */
-    flex: 1;
-/* Allow to grow/shrink equally */
-    min-width: 280px;
-/* Set a minimum width before wrapping, adjust as needed for desired visual size */
-    box-sizing: border-box;
-/* Include padding in the element's total width */
+    flex: 1; [cite: 71]
+    /* Allow to grow/shrink equally */ [cite: 71]
+    min-width: 280px; [cite: 72]
+    /* Set a minimum width before wrapping, adjust as needed for desired visual size */ [cite: 72]
+    box-sizing: border-box; [cite: 73]
+    /* Include padding in the element's total width */ [cite: 73]
 }
 
 .music-links a:hover {
-    background-color: #008ba3;
-/* Darker accent on hover */
-    transform: translateY(-3px);
-/* Slight lift effect */
+    background-color: #008ba3; [cite: 74]
+    /* Darker accent on hover */ [cite: 74]
+    transform: translateY(-3px); [cite: 75]
+    /* Slight lift effect */ [cite: 75]
 }
 
 /* Styling for Font Awesome Icons in music links */
 .music-links i {
-    color: #ffffff;
-/* Make the icons white for good contrast on the cyan button */
-    font-size: 2.4em;
-/* Increased icon size proportionally (from 1.8em) */
-    margin-right: 5px;
-/* Space between icon and text */
+    color: #ffffff; [cite: 76]
+    /* Make the icons white for good contrast on the cyan button */ [cite: 76]
+    font-size: 2.4em; [cite: 77]
+    /* Increased icon size proportionally (from 1.8em) */ [cite: 77]
+    margin-right: 5px; [cite: 78]
+    /* Space between icon and text */ [cite: 78]
 }
 
 /* Styles for all-songs-container and individual song previews */
 #all-songs-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    display: grid; [cite: 79]
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); [cite: 79]
     gap: 1.5rem;
     margin-top: 2rem;
 }
@@ -317,14 +323,14 @@ section h2 {
 .song-preview {
     background-color: rgba(58, 58, 58, 0.9);
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); [cite: 80]
     padding: 1rem;
     text-align: center;
 }
 
 .song-preview h4 {
-    color: #00bcd4;
-    margin-top: 0;
+    color: #00bcd4; [cite: 81]
+    margin-top: 0; [cite: 81]
     margin-bottom: 0.8rem;
     font-size: 1.3em;
 }
@@ -332,201 +338,206 @@ section h2 {
 .song-preview iframe {
     border-radius: 12px;
     width: 100%;
-    height: 100px; /* Adjusted height */
-    border: none;
+    height: 100px; /* Adjusted height */ [cite: 82]
+    border: none; [cite: 82]
 }
 
 
 /* New style for download call-to-action */
 .download-cta {
     text-align: center;
-    margin-top: 3rem;
-/* More space above it */
+    margin-top: 3rem; [cite: 83]
+    /* More space above it */ [cite: 83]
     padding: 1.5rem;
-    background-color: rgba(42, 42, 42, 0.9);
-/* Matches other section backgrounds */
+    background-color: rgba(42, 42, 42, 0.9); [cite: 84]
+    /* Matches other section backgrounds */ [cite: 84]
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); [cite: 85]
 }
 
 .download-cta p {
     font-size: 1.1em;
     margin-bottom: 1rem;
-    color: #e0e0e0;
-/* Match main text color */
+    color: #e0e0e0; [cite: 86]
+    /* Match main text color */ [cite: 86]
 }
 
 /* News Section Specifics */
 article {
-    background-color: rgba(58, 58, 58, 0.9);
-/* Slightly different background for articles with transparency */
+    background-color: rgba(58, 58, 58, 0.9); [cite: 87]
+    /* Slightly different background for articles with transparency */ [cite: 87]
     padding: 1.5rem;
     border-radius: 6px;
     margin-bottom: 1.5rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); [cite: 88]
 }
 
 article h3 {
-    color: #00bcd4;
-    margin-top: 0;
+    color: #00bcd4; [cite: 89]
+    margin-top: 0; [cite: 89]
     font-size: 1.5em;
+}
+
+/* Added for paragraphs within articles */
+article p {
+    color: #e0e0e0;
 }
 
 .date {
     font-size: 0.9em;
     color: #aaaaaa;
     margin-bottom: 1rem;
-    display: block;
-/* Ensures date is on its own line */
+    display: block; [cite: 90]
+    /* Ensures date is on its own line */ [cite: 90]
 }
 
 .button {
     display: inline-block;
     background-color: #00bcd4;
-    color: #000000;
-    padding: 0.7rem 1.2rem;
+    color: #000000; [cite: 91]
+    padding: 0.7rem 1.2rem; [cite: 91]
     border-radius: 5px;
     text-decoration: none;
     font-weight: bold;
     margin-top: 1rem;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Add a subtle shadow to buttons */
+    transition: background-color 0.3s ease, transform 0.2s ease; [cite: 92]
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Add a subtle shadow to buttons */ [cite: 92]
 }
 
 .button:hover {
-    background-color: #008ba3;
-    transform: translateY(-2px);
+    background-color: #008ba3; [cite: 93]
+    transform: translateY(-2px); [cite: 93]
 }
 
 /* Social Links / Contact Section */
 .social-links {
     text-align: center;
-    margin-top: 1.5rem;
+    margin-top: 1.5rem; [cite: 94]
 }
 
 .social-links a {
     color: #00bcd4;
     text-decoration: none;
     font-size: 1.1em;
-    margin: 0 1rem;
-    transition: color 0.3s ease, transform 0.2s ease;
+    margin: 0 1rem; [cite: 95]
+    transition: color 0.3s ease, transform 0.2s ease; [cite: 95]
     display: inline-block; /* Allows transform to work */
 }
 
 .social-links a:hover {
-    color: #ffffff;
-    transform: translateY(-3px);
+    color: #ffffff; [cite: 96]
+    transform: translateY(-3px); [cite: 96]
 }
 
 /* Styling for the TikTok embed */
 .tiktok-heading {
-    font-family: 'Luckiest Guy', cursive;
-/* Match your other headings */
+    font-family: 'Luckiest Guy', cursive; [cite: 97]
+    /* Match your other headings */ [cite: 97]
     color: #00bcd4;
     text-align: center;
-    margin-top: 2rem;
-/* Add some space above the heading */
+    margin-top: 2rem; [cite: 98]
+    /* Add some space above the heading */ [cite: 98]
     margin-bottom: 1rem;
-    font-size: 2em;
-/* Adjust as needed */
+    font-size: 2em; [cite: 99]
+    /* Adjust as needed */ [cite: 99]
 }
 
 .tiktok-embed-container {
     display: flex;
-    justify-content: center;
-/* Center the TikTok blockquote */
+    justify-content: center; [cite: 100]
+    /* Center the TikTok blockquote */ [cite: 100]
     margin-top: 1.5rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.5rem; [cite: 101]
 }
 
 /* Ensure the blockquote itself is responsive within its max-width */
 .tiktok-embed {
-    width: 100%;
-/* Make sure it takes full width of its container up to max-width */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-/* Add a subtle shadow */
-    border-radius: 8px;
-/* Match other elements' rounded corners */
-    overflow: hidden;
-/* Important for border-radius on embeds */
+    width: 100%; [cite: 102]
+    /* Make sure it takes full width of its container up to max-width */ [cite: 102]
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); [cite: 103]
+    /* Add a subtle shadow */ [cite: 103]
+    border-radius: 8px; [cite: 104]
+    /* Match other elements' rounded corners */ [cite: 104]
+    overflow: hidden; [cite: 105]
+    /* Important for border-radius on embeds */ [cite: 105]
 }
 
 /* Footer Styles */
 footer {
-    background-color: rgba(0, 0, 0, 0.8);
-/* Darker footer with some transparency */
+    background-color: rgba(0, 0, 0, 0.8); [cite: 106]
+    /* Darker footer with some transparency */ [cite: 106]
     color: #aaaaaa;
     text-align: center;
     padding: 1.5rem 1rem;
-    margin-top: 2rem;
-    font-size: 0.9em;
+    margin-top: 2rem; [cite: 107]
+    font-size: 0.9em; [cite: 107]
 }
 
 /* Responsive Design (for smaller screens) */
 @media (max-width: 768px) {
     header h1 {
-        font-size: 2.2em;
-/* Further adjusted for smaller screens to ensure one line */
-        white-space: normal;
-/* Allow wrapping on very small screens if necessary */
+        font-size: 2.2em; [cite: 108]
+        /* Further adjusted for smaller screens to ensure one line */ [cite: 108]
+        white-space: normal; [cite: 109]
+        /* Allow wrapping on very small screens if necessary */ [cite: 109]
     }
 
     header p {
-        font-size: 1em;
+        font-size: 1em; [cite: 110]
     }
 
     main {
-        padding: 1rem;
+        padding: 1rem; [cite: 111]
     }
 
     section {
-        padding: 1.5rem;
+        padding: 1.5rem; [cite: 112]
     }
 
     section h2 {
-        font-size: 2em;
-/* Adjusted for smaller screens */
+        font-size: 2em; [cite: 113]
+        /* Adjusted for smaller screens */ [cite: 113]
     }
 
     /* Music Links on smaller screens */
     .music-links a {
-        flex-direction: column;
-/* Stack icon and text on small screens */
-        padding: 0.9rem 1.5rem;
-/* Adjusted padding for mobile (from 0.7rem 1rem) */
-        font-size: 1.2em;
-/* Adjusted font size for mobile (from 1em) */
-        gap: 8px;
-/* Adjusted gap */
-        width: 100%;
-/* NEW: Make them take full width of the container on mobile */
-        max-width: none;
-/* NEW: Remove any desktop max-width constraints */
-        min-width: unset;
-/* NEW: Reset min-width for mobile stacking */
+        flex-direction: column; [cite: 114]
+        /* Stack icon and text on small screens */ [cite: 114]
+        padding: 0.9rem 1.5rem; [cite: 115]
+        /* Adjusted padding for mobile (from 0.7rem 1rem) */ [cite: 115]
+        font-size: 1.2em; [cite: 116]
+        /* Adjusted font size for mobile (from 1em) */ [cite: 116]
+        gap: 8px; [cite: 117]
+        /* Adjusted gap */ [cite: 117]
+        width: 100%; [cite: 118]
+        /* NEW: Make them take full width of the container on mobile */ [cite: 118]
+        max-width: none; [cite: 119]
+        /* NEW: Remove any desktop max-width constraints */ [cite: 119]
+        min-width: unset; [cite: 120]
+        /* NEW: Reset min-width for mobile stacking */ [cite: 120]
     }
 
     /* Adjust icon size for mobile view */
     .music-links i {
-        color: #ffffff;
-/* Make the icons white for good contrast on the cyan button */
-        font-size: 2.4em;
-/* Corrected to match desktop size for icons, or adjust as desired for mobile */
-        margin-right: 5px;
-/* Keep consistent with desktop if not stacking, or set to 0 if stacking */
-        margin-bottom: 0;
-/* No bottom margin unless specifically stacking */
+        color: #ffffff; [cite: 121]
+        /* Make the icons white for good contrast on the cyan button */ [cite: 121]
+        font-size: 2.4em; [cite: 122]
+        /* Corrected to match desktop size for icons, or adjust as desired for mobile */ [cite: 122]
+        margin-right: 5px; [cite: 123]
+        /* Keep consistent with desktop if not stacking, or set to 0 if stacking */ [cite: 123]
+        margin-bottom: 0; [cite: 124]
+        /* No bottom margin unless specifically stacking */ [cite: 124]
     }
 
     /* Responsive adjustments for TikTok embed */
     .tiktok-heading {
-        font-size: 1.8em;
-/* Smaller on mobile */
+        font-size: 1.8em; [cite: 125]
+        /* Smaller on mobile */ [cite: 125]
     }
 
     .social-links a {
-        display: block;
-/* Stack social links vertically */
+        display: block; [cite: 126]
+        /* Stack social links vertically */ [cite: 126]
         margin: 0.5rem 0;
     }
 }
