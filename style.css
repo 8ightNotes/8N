@@ -170,7 +170,7 @@ body {
 header {
     background-color: #ffffff;
 /* Even darker for header with some transparency */
-    color: #ffffff;
+    color: #00FFFF;
     padding: 2rem 1rem;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
 
