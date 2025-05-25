@@ -2,7 +2,7 @@
 html, body {
     margin: 0;
     padding: 0;
- }
+}
 
 /* General Body Styles */
 body {
@@ -43,7 +43,7 @@ body {
  /* Ensures it stays on top of other content */
     width: 100%;
     box-sizing: border-box;
- }
+}
 
 .navbar .container {
     display: flex;
@@ -82,12 +82,12 @@ body {
     transition: background-color 0.3s ease, color 0.3s ease;
     border-radius: 4px;
     font-weight: bold;
- }
+}
 
 .nav-list li a:hover {
     background-color: #00bcd4; /* Accent color on hover */
     color: #000000;
- }
+}
 
 /* Mobile Menu (Hamburger) Styles */
 .menu-toggle {
@@ -106,7 +106,7 @@ body {
     background-color: #ffffff;
     border-radius: 10px;
     transition: all 0.3s ease-in-out;
- }
+}
 
 /* Animation for Hamburger to X */
 .menu-toggle.is-active .bar:nth-child(2) {
@@ -346,7 +346,7 @@ section h2 {
  /* Matches other section backgrounds */
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
- }
+}
 
 .download-cta p {
     font-size: 1.1em;
