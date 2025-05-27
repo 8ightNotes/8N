@@ -34,7 +34,6 @@ body {
 /* --- Navigation Styles --- */
 .navbar {
     background-color: #2a2a2a;
-/* Darker for navbar */
     padding: 1rem 0;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
 position: sticky;
@@ -42,7 +41,10 @@ position: sticky;
     top: 0;
     z-index: 1000;
 /* Ensures it stays on top of other content */
-    width: 100%;
+    width: 100vw; /* Ensure navbar covers full viewport width */
+    left: 0;
+    right: 0;
+    margin: 0;
     box-sizing: border-box;
 }
 
@@ -51,11 +53,12 @@ position: sticky;
     justify-content: space-between;
 /* Pushes title to left, menu to right */
     align-items: center;
-    max-width: 900px;
-/* Match your main content width */
-    margin: 0 auto;
+    width: 100%; /* Full width for container */
+    max-width: unset; /* Remove max-width for all screens */
+    margin: 0;
     padding: 0 1rem;
 /* Padding for small screens */
+    box-sizing: border-box;
 }
 
 .site-title {
@@ -129,8 +132,11 @@ cursor: pointer;
 @media (max-width: 768px) {
     .navbar .container {
         justify-content: space-between;
-        /* Allow full width on mobile */
-        max-width: unset; /* Remove max-width on smaller screens */
+        width: 100%;
+        max-width: unset;
+        margin: 0;
+        padding: 0 1rem;
+        box-sizing: border-box;
     }
 
     .menu-toggle {
