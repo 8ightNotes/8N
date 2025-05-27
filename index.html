@@ -224,5 +224,36 @@
     
         });
     </script>
+
+<!-- PayPal Donation Button -->
+<div class="gsap-animate" style="text-align:center; margin-top: 2em;">
+  <form action="https://www.paypal.com/donate" method="post" target="_blank">
+    <input type="hidden" name="business" value="mcreep057@gmail.com" />
+    <input type="hidden" name="currency_code" value="USD" />
+    <input type="submit" value="Donate with PayPal" />
+  </form>
+</div>
+
+
+<!-- GSAP Animation -->
+<script src="https://cdn.jsdelivr.net/npm/gsap@3"></script>
+<script>
+  gsap.from(".gsap-animate", { duration: 1, opacity: 0, y: 50 });
+</script>
+
+
+<!-- Crisp Chatbot -->
+<script type="text/javascript">
+  window.$crisp = [];
+  window.CRISP_WEBSITE_ID = "679a0f22-d584-41d0-8615-44c73b1a66e4";
+  (function () {
+    d = document;
+    s = d.createElement("script");
+    s.src = "https://client.crisp.chat/l.js";
+    s.async = 1;
+    d.getElementsByTagName("head")[0].appendChild(s);
+  })();
+</script>
+
 </body>
 </html>
