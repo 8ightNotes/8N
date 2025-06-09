@@ -60,8 +60,8 @@ position: sticky;
 
 .site-title {
     font-family: 'Luckiest Guy', cursive;
-    color: #00bcd4;
-/* Accent color */
+    color: #FFA500;
+/* Accent color - Orange */
     font-size: 2em;
     text-decoration: none;
     letter-spacing: 1px;
@@ -86,7 +86,7 @@ padding: 0.8rem 1.2rem;
 }
 
 .nav-list li a:hover {
-    background-color: #00bcd4; /* Accent color on hover */
+    background-color: #FFA500; /* Accent color on hover - Orange */
     color: #ffffff;
 }
 
@@ -173,7 +173,7 @@ font-size: 1.1em;
 header {
     background-color: #222222;
 /* Darker for header with some transparency */
-    color: #00FFFF;
+    color: #FFA500;
     padding: 2rem 1rem;
 box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
 
@@ -236,13 +236,13 @@ box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 section h2 {
     font-family: 'Luckiest Guy', cursive;
 /* Applied Luckiest Guy font */
-    color: #00bcd4;
-/* A vibrant accent color (cyan) */
+    color: #FFA500;
+/* A vibrant accent color (Orange) */
     text-align: center;
     margin-bottom: 1.5rem;
     font-size: 2.5em;
 /* Slightly larger for section titles */
-    border-bottom: 2px solid #00bcd4;
+    border-bottom: 2px solid #FFA500;
     padding-bottom: 0.5rem;
     display: inline-block;
 /* To make border-bottom only as wide as text */
@@ -263,8 +263,8 @@ flex-wrap: wrap; /* Allows links to wrap on smaller screens */
 }
 
 .music-links a {
-    background-color: #00bcd4;
-/* Accent color for buttons/links */
+    background-color: #FFA500;
+/* Accent color for buttons/links - Orange */
     color: #ffffff;
 /* Dark text for contrast */
     padding: 1.1rem 2rem;
@@ -293,8 +293,8 @@ box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Add a subtle shadow to buttons */
 }
 
 .music-links a:hover {
-    background-color: #008ba3;
-/* Darker accent on hover */
+    background-color: #E68A00;
+/* Darker accent on hover - Darker Orange */
     transform: translateY(-3px);
 /* Slight lift effect */
 }
@@ -302,7 +302,7 @@ box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Add a subtle shadow to buttons */
 /* Styling for Font Awesome Icons in music links */
 .music-links i {
     color: #ffffff;
-/* Make the icons white for good contrast on the cyan button */
+/* Make the icons white for good contrast on the Orange button */
     font-size: 2.4em;
 /* Increased icon size proportionally (from 1.8em) */
     margin-right: 5px;
@@ -326,7 +326,7 @@ box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .song-preview h4 {
-    color: #00bcd4;
+    color: #FFA500;
 margin-top: 0;
     margin-bottom: 0.8rem;
     font-size: 1.3em;
@@ -371,7 +371,7 @@ box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 article h3 {
-    color: #00bcd4;
+    color: #FFA500;
     margin-top: 0;
     font-size: 1.5em;
 }
@@ -386,7 +386,7 @@ article h3 {
 
 .button {
     display: inline-block;
-    background-color: #00bcd4;
+    background-color: #FFA500;
     color: #ffffff;
 padding: 0.7rem 1.2rem;
     border-radius: 5px;
@@ -398,7 +398,7 @@ box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Add a subtle shadow to buttons */
 }
 
 .button:hover {
-    background-color: #008ba3;
+    background-color: #E68A00;
 transform: translateY(-2px);
 }
 
@@ -409,7 +409,7 @@ transform: translateY(-2px);
 }
 
 .social-links a {
-    color: #00bcd4;
+    color: #FFA500;
     text-decoration: none;
     font-size: 1.1em;
     margin: 0 1rem;
@@ -426,7 +426,7 @@ transform: translateY(-3px);
 .tiktok-heading {
     font-family: 'Luckiest Guy', cursive;
 /* Match your other headings */
-    color: #00bcd4;
+    color: #FFA500;
     text-align: center;
     margin-top: 2rem;
 /* Add some space above the heading */
@@ -515,7 +515,7 @@ font-size: 0.9em;
     /* Adjust icon size for mobile view */
     .music-links i {
         color: #ffffff;
-/* Make the icons white for good contrast on the cyan button */
+/* Make the icons white for good contrast on the Orange button */
         font-size: 2.4em;
 /* Corrected to match desktop size for icons, or adjust as desired for mobile */
         margin-right: 5px;
@@ -561,7 +561,7 @@ font-size: 0.9em;
 }
 
 .download-item h3 {
-    color: #00bcd4;
+    color: #FFA500;
     margin-top: 0;
     margin-bottom: 0.8rem;
 font-size: 1.5em; /* Slightly larger than song-preview h4 */
@@ -633,7 +633,7 @@ section > .gsap-animate { /* Target only when it's a direct child of a section *
 
 /* Style the actual PayPal submit button inside the styled container */
 section > .gsap-animate input[type="submit"] {
-    background-color: #00bcd4; /* Cyan color, similar to your other buttons */
+    background-color: #FFA500; /* Orange color, similar to your other buttons */
     color: #ffffff; /* White text for contrast */
     padding: 1.1rem 2rem; /* Make it large and prominent, similar to music links buttons */
     border-radius: 5px;
@@ -649,6 +649,6 @@ section > .gsap-animate input[type="submit"] {
 
 /* Hover effect for the styled PayPal button */
 section > .gsap-animate input[type="submit"]:hover {
-    background-color: #008ba3; /* Darker cyan on hover */
+    background-color: #E68A00; /* Darker orange on hover */
     transform: translateY(-3px); /* Slight lift effect */
 }
