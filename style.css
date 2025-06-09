@@ -225,7 +225,7 @@ main {
 }
 
 section {
-    background-color: rgba(42, 42, 42, 0.9);
+    background-color: #F5F5DC; /* Cream White */
 /* Slightly lighter dark for sections with transparency */
     margin-bottom: 2rem;
     padding: 2rem;
@@ -318,7 +318,7 @@ grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
 .song-preview {
-    background-color: rgba(58, 58, 58, 0.9);
+    background-color: #F5F5DC; /* Cream White */
     border-radius: 8px;
 box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
     padding: 1rem;
@@ -347,7 +347,7 @@ margin-top: 0;
 margin-top: 3rem;
 /* More space above it */
     padding: 1.5rem;
-    background-color: rgba(42, 42, 42, 0.9);
+    background-color: #F5F5DC; /* Cream White */
 /* Matches other section backgrounds */
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
@@ -356,13 +356,13 @@ margin-top: 3rem;
 .download-cta p {
     font-size: 1.1em;
     margin-bottom: 1rem;
-    color: #e0e0e0;
+    color: #000000; /* Black text */
 /* Match main text color */
 }
 
 /* News Section Specifics */
 article {
-    background-color: rgba(58, 58, 58, 0.9);
+    background-color: #F5F5DC; /* Cream White */
 /* Slightly different background for articles with transparency */
     padding: 1.5rem;
     border-radius: 6px;
@@ -378,7 +378,7 @@ article h3 {
 
 .date {
     font-size: 0.9em;
-    color: #aaaaaa;
+    color: #000000; /* Black text */
     margin-bottom: 1rem;
     display: block;
 /* Ensures date is on its own line */
@@ -547,7 +547,7 @@ font-size: 0.9em;
 }
 
 .download-item {
-    background-color: rgba(58, 58, 58, 0.9);
+    background-color: #F5F5DC; /* Cream White */
 /* Similar to song-preview background */
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
@@ -568,7 +568,7 @@ font-size: 1.5em; /* Slightly larger than song-preview h4 */
 }
 
 .download-item p {
-    color: #e0e0e0;
+    color: #000000; /* Black text */
     font-size: 1em;
     margin-bottom: 1.5rem;
 /* Space before the button */
@@ -617,7 +617,7 @@ font-size: 1.5em; /* Slightly larger than song-preview h4 */
 /* This targets the existing div with class 'gsap-animate' when it's a direct child of a section */
 /* This will create the "black box background" for the donation area */
 section > .gsap-animate { /* Target only when it's a direct child of a section */
-    background-color: rgba(58, 58, 58, 0.9); /* Dark background similar to song-preview */
+    background-color: #F5F5DC; /* Cream White */
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
     padding: 1rem;
