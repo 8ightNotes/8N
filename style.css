@@ -231,6 +231,7 @@ section {
     padding: 2rem;
     border-radius: 8px;
 box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    color: #000000; /* Black text for section content */
 }
 
 section h2 {
@@ -368,6 +369,7 @@ article {
     border-radius: 6px;
     margin-bottom: 1.5rem;
 box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    color: #000000; /* Black text for article content */
 }
 
 article h3 {
