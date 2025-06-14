@@ -9,39 +9,28 @@ body {
     font-family: 'Open Sans', sans-serif;
     line-height: 1.6;
     background-color: #1a1a1a;
-/* Changed to a dark gray for dark mode */
-/* Fallback dark background color if image doesn't load */
-    color: #e0e0e0;
-/* Light text color */
+    color: #ffffff; /* COLOR UPDATE: Changed from light gray to white for better contrast */
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-/* Ensures footer sticks to bottom if content is short */
 
     /* --- BACKGROUND IMAGE PROPERTIES --- */
     background-image: url('images/8ightnotesimage.jpg');
-/* Corrected path */
-    background-size: cover; /* Ensures the image covers the entire body */
+    background-size: cover;
     background-position: center center;
-/* Centers the image */
     background-repeat: no-repeat;
-/* Prevents the image from repeating */
     background-attachment: fixed;
-/* Makes the background fixed as you scroll */
     /* --- END BACKGROUND IMAGE PROPERTIES --- */
 }
 
 /* --- Navigation Styles --- */
 .navbar {
-    background-color: #2a2a2a;
-/* Darker for navbar */
+    background-color: #2a4a6a; /* COLOR UPDATE: Dark Blue from image */
     padding: 1rem 0;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
-position: sticky;
-/* Makes it stick to the top when scrolling */
+    position: sticky;
     top: 0;
     z-index: 1000;
-/* Ensures it stays on top of other content */
     width: 100%;
     box-sizing: border-box;
 }
@@ -49,35 +38,31 @@ position: sticky;
 .navbar .container {
     display: flex;
     justify-content: space-between;
-/* Pushes title to left, menu to right */
     align-items: center;
-    /* max-width: 900px; */ /* MODIFICATION: Removed to allow full width */
     margin: 0 auto;
     padding: 0 1rem;
-/* Padding for small screens */
 }
 
 .site-title {
     font-family: 'Luckiest Guy', cursive;
-    color: #FFA500;
-/* Accent color - Orange */
+    color: #a3c1e6; /* COLOR UPDATE: Light Blue accent */
     font-size: 2em;
     text-decoration: none;
     letter-spacing: 1px;
-text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
 .nav-list {
     list-style: none;
     margin: 0;
     padding: 0;
-display: flex; /* Display list items in a row */
+    display: flex;
 }
 
 .nav-list li a {
     color: #ffffff;
     text-decoration: none;
-padding: 0.8rem 1.2rem;
+    padding: 0.8rem 1.2rem;
     display: block;
     transition: background-color 0.3s ease, color 0.3s ease;
     border-radius: 4px;
@@ -85,19 +70,18 @@ padding: 0.8rem 1.2rem;
 }
 
 .nav-list li a:hover {
-    background-color: #FFA500; /* Accent color on hover - Orange */
+    background-color: #4c76a4; /* COLOR UPDATE: Mid Blue from image */
     color: #ffffff;
 }
 
 /* Mobile Menu (Hamburger) Styles */
 .menu-toggle {
     display: none;
-/* Hidden by default on larger screens */
     flex-direction: column;
     justify-content: space-between;
     width: 30px;
     height: 20px;
-cursor: pointer;
+    cursor: pointer;
 }
 
 .menu-toggle .bar {
@@ -111,58 +95,51 @@ cursor: pointer;
 /* Animation for Hamburger to X */
 .menu-toggle.is-active .bar:nth-child(2) {
     opacity: 0;
-/* Middle bar disappears */
 }
 
 .menu-toggle.is-active .bar:nth-child(1) {
     transform: translateY(8px) rotate(45deg);
-/* Top bar rotates */
 }
 
 .menu-toggle.is-active .bar:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
-/* Bottom bar rotates */
 }
 
 /* Media Query for Mobile Navigation */
 @media (max-width: 768px) {
     .navbar .container {
         justify-content: space-between;
-        /* Allow full width on mobile */
-        max-width: unset; /* Remove max-width on smaller screens */
+        max-width: unset;
     }
 
     .menu-toggle {
         display: flex;
-/* Show hamburger on small screens */
     }
 
     .nav-list {
         display: none;
-/* Hide nav list by default on small screens */
         flex-direction: column;
-width: 100%;
+        width: 100%;
         position: absolute;
-        top: 60px; /* Adjust based on navbar height */
+        top: 60px;
         left: 0;
-background-color: #2a2a2a; /* Darker for mobile nav list */
+        background-color: #2a4a6a; /* COLOR UPDATE: Dark Blue from image */
         box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
-padding: 1rem 0;
+        padding: 1rem 0;
     }
 
     .nav-list.is-active {
         display: flex;
-/* Show nav list when active */
     }
 
     .nav-list li {
         text-align: center;
-margin: 0.5rem 0;
+        margin: 0.5rem 0;
     }
 
     .nav-list li a {
         padding: 1rem 1.5rem;
-font-size: 1.1em;
+        font-size: 1.1em;
     }
 }
 /* --- End Navigation Styles --- */
@@ -170,43 +147,29 @@ font-size: 1.1em;
 
 /* Header Styles */
 header {
-    background-color: #222222;
-/* Darker for header with some transparency */
-    color: #FFA500;
+    background-color: #4c76a4; /* COLOR UPDATE: Mid Blue from image */
+    color: #ffffff; /* COLOR UPDATE: White for contrast on blue */
     padding: 2rem 1rem;
-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
-
-    /* --- FLEXBOX PROPERTIES FOR CENTERING TEXT --- */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
     display: flex;
-flex-direction: column; /* Stack h1 and p vertically */
+    flex-direction: column;
     align-items: center;
-/* Center children horizontally */
     justify-content: center;
-/* --- END FLEXBOX PROPERTIES --- */
-
-    /* --- PROPERTIES FOR FULL WIDTH AND CORRECT BOX MODEL --- */
     width: 100%;
-/* Ensure the header takes full width of its parent (body) */
     box-sizing: border-box;
-/* Include padding in the element's total width */
-    /* --- END NEW PROPERTIES --- */
 }
 
 header h1 {
     font-family: 'Luckiest Guy', cursive;
-/* Applied Luckiest Guy font */
     font-size: 3em;
-/* Adjusted font size for one line on most screens */
     margin-bottom: 0.5rem;
     letter-spacing: 2px;
-text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Subtle text shadow for pop */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     white-space: nowrap;
-/* Prevent text from wrapping by default */
 }
 
 header p {
     font-family: 'Montserrat', sans-serif;
-/* Kept Montserrat for readability */
     font-size: 1.2em;
     font-style: italic;
     color: #ffffff;
@@ -215,112 +178,81 @@ header p {
 /* Main Content Area */
 main {
     flex-grow: 1;
-/* Allows main content to take up available space */
-    padding: 2rem 0; /* MODIFICATION: Changed padding to remove side spacing */
-    /* max-width: 900px; */ /* FIX: Removed to allow full width */
-    /* margin: 0 auto; */   /* FIX: Removed to stop centering a fixed-width container */
+    padding: 2rem 0;
 }
 
 section {
-    background-color: #F5F5DC; /* Cream White */
-/* Slightly lighter dark for sections with transparency */
+    background-color: #f5f2e9; /* COLOR UPDATE: Cream/Off-White from image */
     margin-bottom: 2rem;
     padding: 2rem;
     border-radius: 8px;
-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-    color: #000000; /* Black text for section content */
-    
-    /* NEW: Added max-width and margin here to control content width inside full-width sections */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    color: #000000; /* Black text remains unchanged */
     max-width: 900px;
     margin-left: auto;
     margin-right: auto;
     box-sizing: border-box;
 }
 
-/* Make specific sections full-width if desired */
 section#music, section#tiktok {
-    max-width: none; /* Allow these sections to be truly full-width */
+    max-width: none;
 }
 
 section h2 {
     font-family: 'Luckiest Guy', cursive;
-/* Applied Luckiest Guy font */
-    color: #FFA500;
-/* A vibrant accent color (Orange) */
+    color: #4c76a4; /* COLOR UPDATE: Mid Blue accent */
     text-align: center;
     margin-bottom: 1.5rem;
     font-size: 2.5em;
-/* Slightly larger for section titles */
-    border-bottom: 2px solid #FFA500;
+    border-bottom: 2px solid #4c76a4; /* COLOR UPDATE: Mid Blue accent */
     padding-bottom: 0.5rem;
     display: inline-block;
-/* To make border-bottom only as wide as text */
     margin-left: auto;
     margin-right: auto;
-text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Subtle text shadow */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
 /* Music Links (Spotify, Apple, YouTube Buttons) */
 .music-links {
     display: flex;
-    flex-wrap: wrap; /* Allows links to wrap on smaller screens */
+    flex-wrap: wrap;
     justify-content: center;
     gap: 1.5rem;
-/* Space between links */
     margin-top: 1.5rem;
     margin-bottom: 2rem;
-    
-    /* NEW: Added for better spacing within the full-width section */
     max-width: 900px;
     margin-left: auto;
     margin-right: auto;
 }
 
 .music-links a {
-    background-color: #FFA500;
-/* Accent color for buttons/links - Orange */
+    background-color: #4c76a4; /* COLOR UPDATE: Mid Blue accent */
     color: #ffffff;
-/* Dark text for contrast */
     padding: 1.1rem 2rem;
-/* Adjusted from 0.8rem 1.5rem for ~35% increase */
     border-radius: 5px;
     text-decoration: none;
     font-weight: bold;
     font-size: 1.35em;
-/* Increased font size by 35% */
     display: flex;
     align-items: center;
     justify-content: center;
-/* NEW: Center content horizontally inside the button */
     gap: 12px;
-/* Increased gap slightly */
     transition: background-color 0.3s ease, transform 0.2s ease;
-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Add a subtle shadow to buttons */
-
-    /* NEW: Flexbox properties for equal width distribution */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
     flex: 1;
-/* Allow to grow/shrink equally */
     min-width: 280px;
-/* Set a minimum width before wrapping, adjust as needed for desired visual size */
     box-sizing: border-box;
-/* Include padding in the element's total width */
 }
 
 .music-links a:hover {
-    background-color: #E68A00;
-/* Darker accent on hover - Darker Orange */
+    background-color: #3a608a; /* COLOR UPDATE: Darker Blue for hover */
     transform: translateY(-3px);
-/* Slight lift effect */
 }
 
-/* Styling for Font Awesome Icons in music links */
 .music-links i {
     color: #ffffff;
-/* Make the icons white for good contrast on the Orange button */
     font-size: 2.4em;
-/* Increased icon size proportionally (from 1.8em) */
     margin-right: 5px;
-/* Space between icon and text */
 }
 
 /* Styles for all-songs-container and individual song previews */
@@ -329,14 +261,13 @@ box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Add a subtle shadow to buttons */
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 1.5rem;
     margin-top: 2rem;
-    /* NEW: Added for better spacing within the full-width section */
     max-width: 900px;
     margin-left: auto;
     margin-right: auto;
 }
 
 .song-preview {
-    background-color: #F5F5DC; /* Cream White */
+    background-color: #f5f2e9; /* COLOR UPDATE: Cream/Off-White from image */
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
     padding: 1rem;
@@ -344,7 +275,7 @@ box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Add a subtle shadow to buttons */
 }
 
 .song-preview h4 {
-    color: #FFA500;
+    color: #4c76a4; /* COLOR UPDATE: Mid Blue accent */
     margin-top: 0;
     margin-bottom: 0.8rem;
     font-size: 1.3em;
@@ -354,19 +285,15 @@ box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Add a subtle shadow to buttons */
     border-radius: 12px;
     width: 100%;
     height: 100px;
-/* Adjusted height */
     border: none;
 }
-
 
 /* New style for download call-to-action */
 .download-cta {
     text-align: center;
     margin-top: 3rem;
-/* More space above it */
     padding: 1.5rem;
-    background-color: #F5F5DC; /* Cream White */
-/* Matches other section backgrounds */
+    background-color: #f5f2e9; /* COLOR UPDATE: Cream/Off-White from image */
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
@@ -374,38 +301,35 @@ box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Add a subtle shadow to buttons */
 .download-cta p {
     font-size: 1.1em;
     margin-bottom: 1rem;
-    color: #000000; /* Black text */
-/* Match main text color */
+    color: #000000;
 }
 
 /* News Section Specifics */
 article {
-    background-color: #F5F5DC; /* Cream White */
-/* Slightly different background for articles with transparency */
+    background-color: #f5f2e9; /* COLOR UPDATE: Cream/Off-White from image */
     padding: 1.5rem;
     border-radius: 6px;
     margin-bottom: 1.5rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-    color: #000000; /* Black text for article content */
+    color: #000000;
 }
 
 article h3 {
-    color: #FFA500;
+    color: #4c76a4; /* COLOR UPDATE: Mid Blue accent */
     margin-top: 0;
     font-size: 1.5em;
 }
 
 .date {
     font-size: 0.9em;
-    color: #000000; /* Black text */
+    color: #000000;
     margin-bottom: 1rem;
     display: block;
-/* Ensures date is on its own line */
 }
 
 .button {
     display: inline-block;
-    background-color: #FFA500;
+    background-color: #4c76a4; /* COLOR UPDATE: Mid Blue accent */
     color: #ffffff;
     padding: 0.7rem 1.2rem;
     border-radius: 5px;
@@ -413,11 +337,11 @@ article h3 {
     font-weight: bold;
     margin-top: 1rem;
     transition: background-color 0.3s ease, transform 0.2s ease;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Add a subtle shadow to buttons */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 .button:hover {
-    background-color: #E68A00;
+    background-color: #3a608a; /* COLOR UPDATE: Darker Blue for hover */
     transform: translateY(-2px);
 }
 
@@ -428,57 +352,47 @@ article h3 {
 }
 
 .social-links a {
-    color: #FFA500;
+    color: #4c76a4; /* COLOR UPDATE: Mid Blue accent */
     text-decoration: none;
     font-size: 1.1em;
     margin: 0 1rem;
     transition: color 0.3s ease, transform 0.2s ease;
-    display: inline-block; /* Allows transform to work */
+    display: inline-block;
 }
 
 .social-links a:hover {
-    color: #ffffff;
+    color: #a3c1e6; /* COLOR UPDATE: Light blue on hover */
     transform: translateY(-3px);
 }
 
 /* Styling for the TikTok embed */
 .tiktok-heading {
     font-family: 'Luckiest Guy', cursive;
-/* Match your other headings */
-    color: #FFA500;
+    color: #4c76a4; /* COLOR UPDATE: Mid Blue accent */
     text-align: center;
     margin-top: 2rem;
-/* Add some space above the heading */
     margin-bottom: 1rem;
     font-size: 2em;
-/* Adjust as needed */
 }
 
 .tiktok-embed-container {
     display: flex;
     justify-content: center;
-/* Center the TikTok blockquote */
     margin-top: 1.5rem;
     margin-bottom: 1.5rem;
 }
 
-/* Ensure the blockquote itself is responsive within its max-width */
 .tiktok-embed {
     width: 100%;
-/* Make sure it takes full width of its container up to max-width */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-/* Add a subtle shadow */
     border-radius: 8px;
-/* Match other elements' rounded corners */
     overflow: hidden;
-/* Important for border-radius on embeds */
 }
 
 /* Footer Styles */
 footer {
-    background-color: #222222;
-/* Darker footer with some transparency */
-    color: #aaaaaa;
+    background-color: #2a4a6a; /* COLOR UPDATE: Dark Blue from image */
+    color: #cccccc; /* COLOR UPDATE: Light gray for contrast on blue */
     text-align: center;
     padding: 1.5rem 1rem;
     margin-top: 2rem;
@@ -489,9 +403,7 @@ footer {
 @media (max-width: 768px) {
     header h1 {
         font-size: 2.2em;
-/* Further adjusted for smaller screens to ensure one line */
         white-space: normal;
-/* Allow wrapping on very small screens if necessary */
     }
 
     header p {
@@ -499,60 +411,43 @@ footer {
     }
 
     main {
-        padding: 1rem 0; /* Adjusted padding */
+        padding: 1rem 0;
     }
 
     section {
         padding: 1.5rem;
-        margin-left: 1rem;  /* Add side margins for smaller screens */
+        margin-left: 1rem;
         margin-right: 1rem;
-        width: auto;      /* Allow width to be determined by margins */
+        width: auto;
     }
 
     section h2 {
         font-size: 2em;
-/* Adjusted for smaller screens */
     }
 
-    /* Music Links on smaller screens */
     .music-links a {
         flex-direction: column;
-/* Stack icon and text on small screens */
         padding: 0.9rem 1.5rem;
-/* Adjusted padding for mobile (from 0.7rem 1rem) */
         font-size: 1.2em;
-/* Adjusted font size for mobile (from 1em) */
         gap: 8px;
-/* Adjusted gap */
         width: 100%;
-/* NEW: Make them take full width of the container on mobile */
         max-width: none;
-/* NEW: Remove any desktop max-width constraints */
         min-width: unset;
-/* NEW: Reset min-width for mobile stacking */
     }
 
-    /* Adjust icon size for mobile view */
     .music-links i {
         color: #ffffff;
-/* Make the icons white for good contrast on the Orange button */
         font-size: 2.4em;
-/* Corrected to match desktop size for icons, or adjust as desired for mobile */
         margin-right: 5px;
-/* Keep consistent with desktop if not stacking, or set to 0 if stacking */
         margin-bottom: 0;
-/* No bottom margin unless specifically stacking */
     }
 
-    /* Responsive adjustments for TikTok embed */
     .tiktok-heading {
         font-size: 1.8em;
-/* Smaller on mobile */
     }
 
     .social-links a {
         display: block;
-/* Stack social links vertically */
         margin: 0.5rem 0;
     }
 }
@@ -562,56 +457,45 @@ footer {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
-/* Increased gap for better spacing */
     margin-top: 2rem;
 }
 
 .download-item {
-    background-color: #F5F5DC; /* Cream White */
-/* Similar to song-preview background */
+    background-color: #f5f2e9; /* COLOR UPDATE: Cream/Off-White from image */
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-/* Slightly stronger shadow */
     padding: 1.5rem;
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-/* Pushes button to bottom if content varies */
 }
 
 .download-item h3 {
-    color: #FFA500;
+    color: #4c76a4; /* COLOR UPDATE: Mid Blue accent */
     margin-top: 0;
     margin-bottom: 0.8rem;
-font-size: 1.5em; /* Slightly larger than song-preview h4 */
+    font-size: 1.5em;
 }
 
 .download-item p {
-    color: #000000; /* Black text */
+    color: #000000;
     font-size: 1em;
     margin-bottom: 1.5rem;
-/* Space before the button */
     flex-grow: 1;
-/* Allows paragraph to take available space */
 }
 
 .download-item .button {
     margin-top: auto;
-/* Pushes button to the bottom */
     display: inline-flex;
-/* Use flex for icon and text alignment */
     align-items: center;
     justify-content: center;
     gap: 8px;
-/* Space between icon and text */
 }
 
 .download-item .button i {
     font-size: 1.2em;
-/* Size for download icon */
     color: #ffffff;
-/* Icon color */
 }
 
 /* Media Query for Download Page on smaller screens */
@@ -634,41 +518,36 @@ font-size: 1.5em; /* Slightly larger than song-preview h4 */
 }
 
 /* New styles for the PayPal donation button to match Spotify preview style */
-/* This targets the existing div with class 'gsap-animate' when it's a direct child of a section */
-/* This will create the "black box background" for the donation area */
-section > .gsap-animate { /* Target only when it's a direct child of a section */
-    background-color: #F5F5DC; /* Cream White */
+section > .gsap-animate {
+    background-color: #f5f2e9; /* COLOR UPDATE: Cream/Off-White from image */
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
     padding: 1rem;
     text-align: center;
-    margin: 2rem auto; /* Center the box and provide spacing */
-    max-width: 320px; /* Adjust as needed, similar to song-preview size or your desired width */
-    width: 100%; /* Ensure it's responsive */
-    box-sizing: border-box; /* Include padding in width calculation */
-    /* The inline style `margin-top: 2em;` on the div will be overridden by these rules */
-    margin-top: 2rem !important; /* Ensure adequate space above it */
-    margin-bottom: 2rem !important; /* Ensure adequate space below it */
+    margin: 2rem auto;
+    max-width: 320px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 2rem !important;
+    margin-bottom: 2rem !important;
 }
 
-/* Style the actual PayPal submit button inside the styled container */
 section > .gsap-animate input[type="submit"] {
-    background-color: #FFA500; /* Orange color, similar to your other buttons */
-    color: #ffffff; /* White text for contrast */
-    padding: 1.1rem 2rem; /* Make it large and prominent, similar to music links buttons */
+    background-color: #4c76a4; /* COLOR UPDATE: Mid Blue accent */
+    color: #ffffff;
+    padding: 1.1rem 2rem;
     border-radius: 5px;
     font-weight: bold;
     font-size: 1.35em;
-    width: 100%; /* Make it span the width of its container, similar to Spotify embeds */
-    border: none; /* Remove default button border */
+    width: 100%;
+    border: none;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-    margin-top: 0.5rem; /* Small space from the top of its new container */
+    margin-top: 0.5rem;
 }
 
-/* Hover effect for the styled PayPal button */
 section > .gsap-animate input[type="submit"]:hover {
-    background-color: #E68A00; /* Darker orange on hover */
-    transform: translateY(-3px); /* Slight lift effect */
+    background-color: #3a608a; /* COLOR UPDATE: Darker Blue for hover */
+    transform: translateY(-3px);
 }
