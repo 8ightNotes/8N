@@ -51,8 +51,7 @@ position: sticky;
     justify-content: space-between;
 /* Pushes title to left, menu to right */
     align-items: center;
-    max-width: 900px;
-/* Match your main content width */
+    /* max-width: 900px; */ /* MODIFICATION: Removed to allow full width */
     margin: 0 auto;
     padding: 0 1rem;
 /* Padding for small screens */
@@ -217,11 +216,9 @@ header p {
 main {
     flex-grow: 1;
 /* Allows main content to take up available space */
-    padding: 2rem 1rem;
-    max-width: 900px;
-/* Max width for content to keep it readable */
-    margin: 0 auto;
-/* Center the content */
+    padding: 2rem 0; /* MODIFICATION: Changed padding to remove side spacing */
+    /* max-width: 900px; */ /* FIX: Removed to allow full width */
+    /* margin: 0 auto; */   /* FIX: Removed to stop centering a fixed-width container */
 }
 
 section {
@@ -232,6 +229,17 @@ section {
     border-radius: 8px;
 box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
     color: #000000; /* Black text for section content */
+    
+    /* NEW: Added max-width and margin here to control content width inside full-width sections */
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+}
+
+/* Make specific sections full-width if desired */
+section#music, section#tiktok {
+    max-width: none; /* Allow these sections to be truly full-width */
 }
 
 section h2 {
@@ -255,12 +263,17 @@ text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Subtle text shadow */
 /* Music Links (Spotify, Apple, YouTube Buttons) */
 .music-links {
     display: flex;
-flex-wrap: wrap; /* Allows links to wrap on smaller screens */
+    flex-wrap: wrap; /* Allows links to wrap on smaller screens */
     justify-content: center;
     gap: 1.5rem;
 /* Space between links */
     margin-top: 1.5rem;
     margin-bottom: 2rem;
+    
+    /* NEW: Added for better spacing within the full-width section */
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .music-links a {
@@ -313,22 +326,26 @@ box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Add a subtle shadow to buttons */
 /* Styles for all-songs-container and individual song previews */
 #all-songs-container {
     display: grid;
-grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 1.5rem;
     margin-top: 2rem;
+    /* NEW: Added for better spacing within the full-width section */
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .song-preview {
     background-color: #F5F5DC; /* Cream White */
     border-radius: 8px;
-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
     padding: 1rem;
     text-align: center;
 }
 
 .song-preview h4 {
     color: #FFA500;
-margin-top: 0;
+    margin-top: 0;
     margin-bottom: 0.8rem;
     font-size: 1.3em;
 }
@@ -345,7 +362,7 @@ margin-top: 0;
 /* New style for download call-to-action */
 .download-cta {
     text-align: center;
-margin-top: 3rem;
+    margin-top: 3rem;
 /* More space above it */
     padding: 1.5rem;
     background-color: #F5F5DC; /* Cream White */
@@ -368,7 +385,7 @@ article {
     padding: 1.5rem;
     border-radius: 6px;
     margin-bottom: 1.5rem;
-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
     color: #000000; /* Black text for article content */
 }
 
@@ -390,18 +407,18 @@ article h3 {
     display: inline-block;
     background-color: #FFA500;
     color: #ffffff;
-padding: 0.7rem 1.2rem;
+    padding: 0.7rem 1.2rem;
     border-radius: 5px;
     text-decoration: none;
     font-weight: bold;
     margin-top: 1rem;
     transition: background-color 0.3s ease, transform 0.2s ease;
-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Add a subtle shadow to buttons */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Add a subtle shadow to buttons */
 }
 
 .button:hover {
     background-color: #E68A00;
-transform: translateY(-2px);
+    transform: translateY(-2px);
 }
 
 /* Social Links / Contact Section */
@@ -415,13 +432,13 @@ transform: translateY(-2px);
     text-decoration: none;
     font-size: 1.1em;
     margin: 0 1rem;
-transition: color 0.3s ease, transform 0.2s ease;
+    transition: color 0.3s ease, transform 0.2s ease;
     display: inline-block; /* Allows transform to work */
 }
 
 .social-links a:hover {
     color: #ffffff;
-transform: translateY(-3px);
+    transform: translateY(-3px);
 }
 
 /* Styling for the TikTok embed */
@@ -465,7 +482,7 @@ footer {
     text-align: center;
     padding: 1.5rem 1rem;
     margin-top: 2rem;
-font-size: 0.9em;
+    font-size: 0.9em;
 }
 
 /* Responsive Design (for smaller screens) */
@@ -482,13 +499,14 @@ font-size: 0.9em;
     }
 
     main {
-        padding: 1rem;
-        /* Allow full width on mobile */
-        max-width: unset; /* Remove max-width on smaller screens */
+        padding: 1rem 0; /* Adjusted padding */
     }
 
     section {
         padding: 1.5rem;
+        margin-left: 1rem;  /* Add side margins for smaller screens */
+        margin-right: 1rem;
+        width: auto;      /* Allow width to be determined by margins */
     }
 
     section h2 {
