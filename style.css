@@ -256,9 +256,11 @@ section h2 {
 }
 
 /* Styles for all-songs-container and individual song previews */
+/* --- ADJUSTMENT STARTS HERE --- */
 #all-songs-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     gap: 1.5rem;
     margin-top: 2rem;
     max-width: 900px;
@@ -267,12 +269,16 @@ section h2 {
 }
 
 .song-preview {
-    background-color: #f5f2e9; /* COLOR UPDATE: Cream/Off-White from image */
+    background-color: #f5f2e9;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
     padding: 1rem;
     text-align: center;
+    width: 100%;
+    max-width: 340px;
+    box-sizing: border-box;
 }
+/* --- ADJUSTMENT ENDS HERE --- */
 
 .song-preview h4 {
     color: #4c76a4; /* COLOR UPDATE: Mid Blue accent */
