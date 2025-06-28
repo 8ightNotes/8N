@@ -194,9 +194,10 @@ section {
     box-sizing: border-box;
 }
 
-section#music, section#tiktok {
-    max-width: none;
-}
+/* REMOVED: section#music, section#tiktok { max-width: none; } */
+/* This was causing the sections to stretch. By removing it,
+   they will inherit the max-width: 900px from the general 'section' rule. */
+
 
 section h2 {
     font-family: 'Luckiest Guy', cursive;
@@ -220,7 +221,7 @@ section h2 {
     gap: 1.5rem;
     margin-top: 1.5rem;
     margin-bottom: 2rem;
-    max-width: 900px;
+    max-width: 900px; /* Ensure these links also respect the max-width */
     margin-left: auto;
     margin-right: auto;
 }
@@ -256,14 +257,13 @@ section h2 {
 }
 
 /* Styles for all-songs-container and individual song previews */
-/* --- ADJUSTMENT STARTS HERE --- */
 #all-songs-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 1.5rem;
     margin-top: 2rem;
-    max-width: 900px;
+    max-width: 900px; /* Ensures the container itself respects the section max-width */
     margin-left: auto;
     margin-right: auto;
 }
@@ -275,10 +275,9 @@ section h2 {
     padding: 1rem;
     text-align: center;
     width: 100%;
-    max-width: 340px;
+    max-width: 340px; /* Individual song previews can still have their own max-width within the container */
     box-sizing: border-box;
 }
-/* --- ADJUSTMENT ENDS HERE --- */
 
 .song-preview h4 {
     color: #4c76a4; /* COLOR UPDATE: Mid Blue accent */
@@ -302,6 +301,9 @@ section h2 {
     background-color: #f5f2e9; /* COLOR UPDATE: Cream/Off-White from image */
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    max-width: 900px; /* Apply max-width to this specific element as well if it's outside a section */
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .download-cta p {
@@ -386,6 +388,8 @@ article h3 {
     justify-content: center;
     margin-top: 1.5rem;
     margin-bottom: 1.5rem;
+    /* Ensure the container itself respects the max-width of the section */
+    max-width: 100%; /* Keep this for flexibility, but the parent section will constrain it */
 }
 
 .tiktok-embed {
@@ -393,6 +397,8 @@ article h3 {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     border-radius: 8px;
     overflow: hidden;
+    /* Max-width for the actual TikTok embed to prevent it from stretching too wide */
+    max-width: 500px; /* A reasonable max-width for the TikTok embed itself */
 }
 
 /* Footer Styles */
@@ -425,6 +431,8 @@ footer {
         margin-left: 1rem;
         margin-right: 1rem;
         width: auto;
+        /* Re-apply max-width: none for mobile if you want it to stretch */
+        max-width: none;
     }
 
     section h2 {
@@ -455,6 +463,11 @@ footer {
     .social-links a {
         display: block;
         margin: 0.5rem 0;
+    }
+
+    /* Adjustments for TikTok embed on smaller screens */
+    .tiktok-embed {
+        max-width: 100%; /* Allow it to take full width on mobile */
     }
 }
 
