@@ -1,3 +1,9 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@400;700&display=swap');
+/* 'Pacifico' for script headings and titles.
+   'Roboto' is a clean sans-serif that can replace Open Sans, subtly different. */
+
+
 /* Ensure HTML and Body have no default margins/paddings */
 html, body {
     margin: 0;
@@ -6,7 +12,7 @@ html, body {
 
 /* General Body Styles */
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif; /* Changed to Roboto for general text */
     line-height: 1.6;
     background-color: #1a1a1a;
     color: #ffffff; /* COLOR UPDATE: Changed from light gray to white for better contrast */
@@ -44,7 +50,7 @@ body {
 }
 
 .site-title {
-    font-family: 'Luckiest Guy', cursive;
+    font-family: 'Pacifico', cursive; /* Changed to Pacifico */
     color: #a3c1e6; /* COLOR UPDATE: Light Blue accent */
     font-size: 2em;
     text-decoration: none;
@@ -67,6 +73,7 @@ body {
     transition: background-color 0.3s ease, color 0.3s ease;
     border-radius: 4px;
     font-weight: bold;
+    font-family: 'Roboto', sans-serif; /* Ensure nav links use Roboto */
 }
 
 .nav-list li a:hover {
@@ -160,7 +167,7 @@ header {
 }
 
 header h1 {
-    font-family: 'Luckiest Guy', cursive;
+    font-family: 'Pacifico', cursive; /* Changed to Pacifico */
     font-size: 3em;
     margin-bottom: 0.5rem;
     letter-spacing: 2px;
@@ -169,7 +176,7 @@ header h1 {
 }
 
 header p {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif; /* Changed to Roboto */
     font-size: 1.2em;
     font-style: italic;
     color: #ffffff;
@@ -199,7 +206,7 @@ section#music, section#tiktok {
 }
 
 section h2 {
-    font-family: 'Luckiest Guy', cursive;
+    font-family: 'Pacifico', cursive; /* Changed to Pacifico */
     color: #4c76a4; /* COLOR UPDATE: Mid Blue accent */
     text-align: center;
     margin-bottom: 1.5rem;
@@ -242,6 +249,7 @@ section h2 {
     flex: 1;
     min-width: 280px;
     box-sizing: border-box;
+    font-family: 'Roboto', sans-serif; /* Ensure button text uses Roboto */
 }
 
 .music-links a:hover {
@@ -277,6 +285,7 @@ section h2 {
     width: 100%;
     max-width: 340px;
     box-sizing: border-box;
+    font-family: 'Roboto', sans-serif; /* Ensure song preview text uses Roboto */
 }
 /* --- ADJUSTMENT ENDS HERE --- */
 
@@ -285,6 +294,7 @@ section h2 {
     margin-top: 0;
     margin-bottom: 0.8rem;
     font-size: 1.3em;
+    font-family: 'Roboto', sans-serif; /* Ensure song preview heading uses Roboto */
 }
 
 .song-preview iframe {
@@ -302,6 +312,7 @@ section h2 {
     background-color: #f5f2e9; /* COLOR UPDATE: Cream/Off-White from image */
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    font-family: 'Roboto', sans-serif; /* Ensure download cta text uses Roboto */
 }
 
 .download-cta p {
@@ -318,12 +329,14 @@ article {
     margin-bottom: 1.5rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
     color: #000000;
+    font-family: 'Roboto', sans-serif; /* Ensure article text uses Roboto */
 }
 
 article h3 {
     color: #4c76a4; /* COLOR UPDATE: Mid Blue accent */
     margin-top: 0;
     font-size: 1.5em;
+    font-family: 'Pacifico', cursive; /* Changed to Pacifico for news titles */
 }
 
 .date {
@@ -344,6 +357,7 @@ article h3 {
     margin-top: 1rem;
     transition: background-color 0.3s ease, transform 0.2s ease;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    font-family: 'Roboto', sans-serif; /* Ensure button text uses Roboto */
 }
 
 .button:hover {
@@ -355,6 +369,7 @@ article h3 {
 .social-links {
     text-align: center;
     margin-top: 1.5rem;
+    font-family: 'Roboto', sans-serif; /* Ensure social links text uses Roboto */
 }
 
 .social-links a {
@@ -373,7 +388,7 @@ article h3 {
 
 /* Styling for the TikTok embed */
 .tiktok-heading {
-    font-family: 'Luckiest Guy', cursive;
+    font-family: 'Pacifico', cursive; /* Changed to Pacifico */
     color: #4c76a4; /* COLOR UPDATE: Mid Blue accent */
     text-align: center;
     margin-top: 2rem;
@@ -403,6 +418,7 @@ footer {
     padding: 1.5rem 1rem;
     margin-top: 2rem;
     font-size: 0.9em;
+    font-family: 'Roboto', sans-serif; /* Ensure footer text uses Roboto */
 }
 
 /* Responsive Design (for smaller screens) */
@@ -475,6 +491,7 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    font-family: 'Roboto', sans-serif; /* Ensure download item text uses Roboto */
 }
 
 .download-item h3 {
@@ -482,6 +499,7 @@ footer {
     margin-top: 0;
     margin-bottom: 0.8rem;
     font-size: 1.5em;
+    font-family: 'Pacifico', cursive; /* Changed to Pacifico for download titles */
 }
 
 .download-item p {
@@ -536,6 +554,7 @@ section > .gsap-animate {
     box-sizing: border-box;
     margin-top: 2rem !important;
     margin-bottom: 2rem !important;
+    font-family: 'Roboto', sans-serif; /* Ensure donation section text uses Roboto */
 }
 
 section > .gsap-animate input[type="submit"] {
@@ -551,6 +570,7 @@ section > .gsap-animate input[type="submit"] {
     transition: background-color 0.3s ease, transform 0.2s ease;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
     margin-top: 0.5rem;
+    font-family: 'Roboto', sans-serif; /* Ensure donation button text uses Roboto */
 }
 
 section > .gsap-animate input[type="submit"]:hover {
