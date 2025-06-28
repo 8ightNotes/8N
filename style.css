@@ -199,20 +199,17 @@ section#music, section#tiktok {
 }
 
 section h2 {
-    /* Updated to match .site-title style */
-    font-family: 'Luckiest Guy', cursive; /* Match font */
-    color: #a3c1e6; /* Match color */
-    font-size: 2.5em; /* Adjusted size slightly for h2 context, feel free to modify */
-    text-decoration: none; /* Ensure no underline */
-    letter-spacing: 1px; /* Match letter spacing */
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Match text shadow */
+    font-family: 'Luckiest Guy', cursive;
+    color: #4c76a4; /* COLOR UPDATE: Mid Blue accent */
     text-align: center;
     margin-bottom: 1.5rem;
-    border-bottom: none; /* Remove the border if it's not part of the '8ight Notes' style */
-    padding-bottom: 0; /* Adjust padding if border is removed */
+    font-size: 2.5em;
+    border-bottom: 2px solid #4c76a4; /* COLOR UPDATE: Mid Blue accent */
+    padding-bottom: 0.5rem;
     display: inline-block;
     margin-left: auto;
     margin-right: auto;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
 /* Music Links (Spotify, Apple, YouTube Buttons) */
